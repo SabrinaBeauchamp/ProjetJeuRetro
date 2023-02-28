@@ -1,7 +1,7 @@
 import {
      Input, Load
 } from "../Data/Data";
-import { questionIntro, choix, completerIncsription, choixGenre} from "../Data/Array";
+import { choix, completerIncsription} from "../Data/Array";
 import { useContext, useState } from "react";
 import { profileContext } from "../Context/Profile";
 import { authContext } from "../Context/Auth";
@@ -12,13 +12,12 @@ const Formulaire = () => {
     const navigate = useNavigate();
     const [int, setInt] =  useState(0);
     const [questions, setQuestion] = useState(completerIncsription)
-    const [choixReponse, setChoix] = useState(choixGenre);
+    const [choixReponse, setChoix] = useState(choix);
     const [visualiser, setVisualiser] = useState(false);
-    const [isInscrit, setIsInscrit] = useState(false);
     const [userName, SetUserName] = useState("");
 
-    const {CompleterInscription, AddFormulaire} = useContext(profileContext);
-    const {isLoading} = useContext(authContext);
+    const { AddFormulaire} = useContext(profileContext);
+    const {isLoading, user} = useContext(authContext);
 
     const ToggleHandeler = (resultat, question) => {
         setChoix(
@@ -41,25 +40,16 @@ const Formulaire = () => {
             ))
         );
     }
-    console.log(questions)
     
     const FormHandeler = (e) => {
         e.preventDefault();
     }
     const ClickHandeler = async() => {
-        AddFormulaire(questions)
-        console.log("send");
+        AddFormulaire(questions, userName, user.displayName)
         navigate('/accueil');
     }
-    const Etape = async() => {
-        CompleterInscription(questions[0].reponse, questions[1].reponse)
-        setChoix(choix);
-        setQuestion(questionIntro);
-        setInt(0);
-        setIsInscrit(true);
-    }
 
-    const NameHandeler = (resultat, nom) => {
+    const NameHandeler = (resultat, nom ) => {
         SetUserName(resultat);
         setQuestion(
             questions?.map((ques) => (
@@ -67,7 +57,6 @@ const Formulaire = () => {
                 ))
         );
     }
-    console.log(userName);
     
     return(
         <>
@@ -84,10 +73,7 @@ const Formulaire = () => {
                                 {
                                     int !== questions.length-1 ?
                                     <button onClick={()=>ResetChoix()} disabled={int === questions.length-1}><p>Prochaine Question</p></button>
-                                    :   !isInscrit ?
-                                    <button onClick={()=>Etape()} ><p>Completer</p></button>
-                                    :
-                                    
+                                    :   
                                     <button onClick={()=>setVisualiser(!visualiser)} ><p>Sommaire</p></button>
                                 }
                             </form>

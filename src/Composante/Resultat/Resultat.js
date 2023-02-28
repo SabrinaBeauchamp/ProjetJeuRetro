@@ -1,24 +1,18 @@
 import { useState, useEffect, useContext } from "react";
-import {Fiches, Recent} from "../../Data/Data";
+import {Fiches} from "../../Data/Data";
 import moment from 'moment';
 import { profileContext } from '../../Context/Profile';
-import { authContext } from "../../Context/Auth";
-import { Load } from '../../Data/Data';
-import { Link, useNavigate } from "react-router-dom";
-import { collection, onSnapshot, where, query, getDocs } from 'firebase/firestore';
+import { useNavigate } from "react-router-dom";
+import { collection, onSnapshot, where, query } from 'firebase/firestore';
 import { db } from '../../Config/firebase'
-
-
 
 import "./Resultat.scss";
 
 const Resultat = ({}) => {
     const {profile, RecentView} = useContext(profileContext);
-   
     const [isClick, setIsClick] = useState(false)
     const ClickHandelerMenu = () =>setIsClick(!isClick);
     const [ allJeux, setAllJeux] = useState([]);
-    const navigate = useNavigate();
     
     useEffect(() => {
         const getDocument = () => {
@@ -32,6 +26,7 @@ const Resultat = ({}) => {
         
         getDocument() 
     },[profile?.id])
+
     var newest = allJeux?.filter(j => moment(j.date.toDate()).format("MMM") === moment().format("MMM")).map(j => j)
     
     const Verif = (id) => {
@@ -43,38 +38,35 @@ const Resultat = ({}) => {
 
     const ClickHandeler = async(id) => {
         console.log(!Verif(id));
-        if (profile?.Recent?.[0] != null) 
-            if (!Verif(id))
-                RecentView(id);
+        if (!Verif(id))
+            RecentView(id);
         
     }
 
     return (
-        <>
-            <section className="Recherche">
-                <nav className="navBible">
-                    <ul>
-                        <div>
-                            <li onClick={(e) => ClickHandelerMenu()} className={isClick ? `actif`: ""} >Les nouveautées</li>
-                            <li onClick={(e) => ClickHandelerMenu()} className={!isClick ? `actif`: ""} >La bible</li>
-                        </div>
-                        <div>
-                            <li>
-                                <img src="" alt="filtre" />
-                            </li>
-                        </div>
-                    </ul>
-                </nav>
-                <section className="resultat">
-                    {
-                        isClick ?
-                        <Fiches bible={newest} clickFn={ClickHandeler}/>
-                        :
-                        <Fiches bible={allJeux} clickFn={ClickHandeler}/>
-                    }
-                </section>
+        <section className="Recherche">
+            <nav className="navBible">
+                <ul>
+                    <div>
+                        <li onClick={(e) => ClickHandelerMenu()} className={isClick ? `actif`: ""} >Les nouveautées</li>
+                        <li onClick={(e) => ClickHandelerMenu()} className={!isClick ? `actif`: ""} >La bible</li>
+                    </div>
+                    <div>
+                        <li>
+                            <img src="" alt="filtre" />
+                        </li>
+                    </div>
+                </ul>
+            </nav>
+            <section className="resultat">
+                {
+                    isClick ?
+                    <Fiches bible={newest} clickFn={ClickHandeler}/>
+                    :
+                    <Fiches bible={allJeux} clickFn={ClickHandeler}/>
+                }
             </section>
-        </>
+        </section>
     )
 }
 export default (Resultat);

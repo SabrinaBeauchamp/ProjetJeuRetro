@@ -3,24 +3,14 @@ import { profileContext } from "../../Context/Profile";
 import { collection, onSnapshot, where, query, getDocs } from 'firebase/firestore';
 import { db } from '../../Config/firebase'
 import { Link, Outlet } from "react-router-dom";
+import Formulaire from "../Formulaire";
 
 
 const Profile = () => {
     const {profile} = useContext(profileContext);
-    const [liste, setListe] = useState({});
+    const [navClick, setNavClick] = useState("Listes");
 
-    useEffect(() => {
-        const getDocument = async() => {
-            const refs = query(collection(db, "Listes"), where("user", "==", profile?.id)) ;
-            const maCollection =  onSnapshot((refs), (snapshot) => {
-                const monDocuments = snapshot.docs.map(doc => setListe({id: doc.id, ...doc.data()}))
-            })
-        }
-        if (profile?.id)
-            getDocument();
 
-    },[profile?.id])
-     console.log(liste)
     return(
             <>
             <section className="infosPerso">
@@ -28,22 +18,41 @@ const Profile = () => {
                     <img src ="" alt="imagePerso"/>
                 </span>
                 <article className="fichePerso">
-                    <h1>{profile.nom}</h1>
-                    <div className="autre">
-                        <p>nickname: {profile.pseudonyme}</p>
-                        <p>genre: {profile.genre}</p>
-                    </div>
+                    {
+                        profile?.formulaire[1].reponse == "oui" ?
+                        <>
+                            <h1>{profile?.nom}</h1>
+                            <p>({profile?.pseudonyme})</p>
+                        </>
+                        :
+                        <h1>{profile?.pseudonyme}</h1>
+
+                    }
                 </article>
             </section>
+            <nav>
+                <ul>
+                    <li>
+                            Listes</li>
+                    <li> <Link to="/profile/contact">
+                            Contact 
+                    </Link></li>
+                    <li> <Link to="/profile/moi">
+                            Compte
+                    </Link></li>
+                </ul>
+            </nav>
             <section className="sectionscompte">
+                <button className="listes">
+                    <Link to="/profile/listes/aime">Possèder</Link>
+                </button>
                 <button className="contact">
-                    <Link to="/profile/contact">Contact</Link>
+                    <Link to="/profile/listes/maybe">À acheter</Link>
                 </button>
                 <button className="listes">
-                    <Link to="/profile/listes">Listes</Link>
+                    <Link to="/profile/listes/nope">pas intéresser</Link>
                 </button>
             </section>
-            <Outlet/>
         </>
     )
 }

@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "./Menu.scss"
 
 const Menu = () => {
@@ -8,7 +9,9 @@ const Menu = () => {
                 <button type="submit">Recherche</button>
             </span>
             <span className="logoCompte">
-                <img src="" alt="compte" />
+                <Link to="/profile">
+                    <img src="" alt="compte" />
+                </Link>
             </span>
         </div>
     )

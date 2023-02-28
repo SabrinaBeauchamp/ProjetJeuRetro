@@ -27,17 +27,19 @@ const Details = () => {
         if(jeuId)
         getDocument() 
     },[jeuId])
+    console.log(jeux?.unity)
     
-    const ClickHandeler = async() => {
+    const ClickHandeler = async(nom) => {
         var p = {
             nom: jeux.nom,
+            categorie: nom
         }
         AddListes(p, jeux.id);
     }
     return(
         <>
         {
-            jeux != null?
+            jeux?.id != null?
             <>
             <section className="presentation">
                 <span>
@@ -66,15 +68,18 @@ const Details = () => {
             <section className="infos">
                 <section className="Unity">
                     {
-                        jeux?.unity?.loaderUrl !== "" ?
-                        <UnityWindow url={jeux?.unity}/>
-                        : 
+                        jeux?.unity?.loaderUrl == "" ?
                         <div className="gameplay">
                             <div className="screen" >
                                 <p className="test">Le jeu est en préparation ... </p>
                             </div>
 
                         </div>
+                        : 
+                        <>
+                            <p>tu ne devrais pas être la</p> 
+                            <UnityWindow url={jeux.unity}/> 
+                        </>
                     }
                 </section>
                 <section className="footer"> 

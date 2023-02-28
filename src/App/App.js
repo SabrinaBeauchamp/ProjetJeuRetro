@@ -4,7 +4,7 @@ import { authContext } from "../Context/Auth";
 import { useContext } from "react";
 import {
    Formulaire, Accueil, LayoutProfile, LayoutNormal, Bible, Login, Load, 
-   ListeBible, Details, Profile, Corps, AddBible, ListeAttente, Contact, ProfileListes, AddContact, UnityWindow, Scores
+   ListeBible, Details, Profile, Corps, AddBible, ListeAttente, Contact, ProfileListes, AddContact, UnityWindow, Scores, ProfileDetail
 } from "../Data/Data";
 
 const App = () => {
@@ -80,8 +80,12 @@ const App = () => {
               element:<AddContact/>
             },
             {
-              path:'profile/listes',
-              element:<ProfileListes/>
+              path:'profile/listes/:listeId',
+              element:<ProfileListes/>,
+            },
+            {
+              path:'profile/moi',
+              element:<ProfileDetail/>,
             },
             {
               path:'corps',

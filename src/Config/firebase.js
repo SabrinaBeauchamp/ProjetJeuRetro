@@ -2,6 +2,7 @@ import {initializeApp} from 'firebase/app';
 import { getFirestore } from 'firebase/firestore';
 import { getAuth } from 'firebase/auth'
 
+
 const firebaseConfig = {
   apiKey: "AIzaSyDzIx3CuicPted-trvkHOI61YJqxYbrzws",
   authDomain: "jeuxretro-723cc.firebaseapp.com",

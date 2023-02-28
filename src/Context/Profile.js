@@ -9,6 +9,8 @@ const profileContext = React.createContext({
     AddFormulaire : () => {},
     AddListes : () => {},
     RecentView : () => {},
+    ModifyProfil : () => {},
+    DeleteProfil : () => {},
 });
 
 const {Provider} = profileContext;
@@ -34,41 +36,56 @@ const ProfileProvider = ({children}) => {
             pseudonyme:pseudonyme,
         }, {merge:true})
     }
-    const AddFormulaire = async(formulaire) => {
+    const AddFormulaire = async(formulaire, pseudonyme, nom) => {
         const userRef = doc(db, 'Users', user.uid);
         await setDoc(userRef, {
             formulaire: formulaire,
+            pseudonyme: pseudonyme,
+            nom: nom,
+            liste:"",
+            Recent:"",
+            View:0,
         }, {merge:true})
     }
     const AddListes = async(infoListe, id) => {
+        console.log(infoListe);
+        console.log(id);
         const userRef = doc(db, 'Users', user.uid);
         await setDoc(userRef, {
             categories: { 
                 [id]:infoListe.categorie,
             },
             liste: {
-                [id]:profile?.categories?.[id] ? infoListe : arrayUnion(infoListe) 
+                [id]:infoListe.nom,
             }
              
         }, {merge:true})
     }
     const RecentView = async(id) => {
-        
-        
-        // var index = profile?.View;
+        var index = profile?.View > 4 ? 0: profile?.View;
         console.log("add");
-        // const userRef = doc(db, 'Users', user.uid);
-        // await setDoc(userRef, {
-        //     Recent: {
-        //         [index]:id,
-        //     },
-        //     View: increment(1)
-        // }, {merge:true})
+        const userRef = doc(db, 'Users', user.uid);
+        await setDoc(userRef, {
+            Recent: {
+                [index]:id,
+            },
+            View: increment(1)
+        }, {merge:true})
     }
+    
+    const ModifyProfil = async(formulaire, pseudonyme) => {
+        const userRef = doc(db, 'Users', user.uid);
+        await setDoc(userRef, {
+            formulaire: formulaire,
+            pseudonyme: pseudonyme,
+        }, {merge:true})
+    }
+
+    const DeleteProfil = async() => await deleteDoc(doc(db, "Users", user.uid))
 
 
     return (
-        <Provider value={{user, profile, CompleterInscription, AddFormulaire , AddListes, RecentView }}>
+        <Provider value={{user, profile, CompleterInscription, AddFormulaire , AddListes, RecentView, ModifyProfil, DeleteProfil }}>
             {children}
         </Provider>
     )

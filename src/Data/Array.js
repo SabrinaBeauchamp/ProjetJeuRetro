@@ -1,30 +1,4 @@
-const corps = ["oreilles", "vues", "coup", "pied"]
-const genre = ["homme", "femme", "no-binaire", "transgenre", "autre"]
-export const questionIntro = [
-    
-    {
-        nom:"question_1",
-        label:"1",
-        type: "checkbox",
-        text: "pratiwbfjdbsfd",
-        reponse:"",
-    },
-    {
-        nom:"question_2",
-        label:"2",
-        type: "checkbox",
-        text: "pratid",
-        reponse:"",
-    },
-    {
-        nom:"question_3",
-        label:"3",
-        type: "checkbox",
-        text: "prati",
-        reponse:"",
-    },
-];
-
+const categorie = ["Jeux plateforme", "FPS", "RPG", "MMORPG", "MOBA", "Jeux horreur", "hack'n slash", "RTS", "Jeux sport", "Jeux de réflexion", "Jeux 'Blockade'", "Jeux arcade", "Jeux d'aventure"]
 export const choix =[
     {
         nom:"oui",
@@ -39,38 +13,33 @@ export const choix =[
 export const completerIncsription = [
     {
         nom:"question_1",
-        label:"1",
-        type: "checkbox",
-        text: "Qu'elle est votre genre?",
-        reponse:"",
-    },
-    {
-        nom:"question_2",
         label:"2",
         type: "text",
         text: "Votre pseudonyme?",
         reponse:"",
     },
+    {
+        nom:"question_2",
+        label:"2",
+        type: "checkbox",
+        text: "voulez-vous qu'on utilise votre nom ou votre pseudonyme?",
+        reponse:"",
+    },
+    {
+        nom:"question_3",
+        label:"3",
+        type: "checkbox",
+        text: "selectionner quelle categorie de jeu que vous aimer jouer?",
+        reponse:"",
+    },
+    {
+        nom:"question_4",
+        label:"4",
+        type: "checkbox",
+        text: "Est-ce que vous accepter de rendre public vos liste aux autres utilisateur? ",
+        reponse:"",
+    },
 ]
-
-export const choixGenre =[
-    {
-        nom:"homme",
-        selected: false,
-    },
-    {
-        nom:"femme",
-        selected: false,
-    },
-    {
-        nom:"no-binaire",
-        selected: false,
-    },
-    {
-        nom:"transgenre",
-        selected: false,
-    },
-];
 
 export const options = [
     {

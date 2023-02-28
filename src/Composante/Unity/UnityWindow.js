@@ -1,17 +1,10 @@
-import { Unity, useUnityContext } from "react-unity-webgl";
+
 
 const UnityWindow = ({url}) =>{
-    const { unityProvider } = useUnityContext(
-        url != null ?{
-            loaderUrl:url.loaderUrl,
-            dataUrl:url.dataUrl,
-            frameworkUrl:url.frameworkUrl,
-            codeUrl:url.codeUrl,
-        }
-        :{})
-
     return (
-        <Unity unityProvider={unityProvider} style={{ width: 960, height: 600 }} />
+        <>
+        <iframe src="https://i.simmer.io/@llama/pong" style={{width:960, height:600}}></iframe>
+        </>
       );
 }
 export default(UnityWindow);
