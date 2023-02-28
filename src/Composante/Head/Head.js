@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
 import { useContext } from "react";
-import { authContext } from "../Context/Auth";
+import { authContext } from "../../Context/Auth";
 import { GoogleButton } from 'react-google-button';
-import { profileContext } from '../Context/Profile';
+import { profileContext } from '../../Context/Profile';
 
 
 
@@ -14,19 +14,25 @@ const Head = () => {
         logout();
     }
     return(
-        <header>
+        <header className="sideBar">
             <h1><Link to='/'>Logo</Link></h1>
             <nav>
                 <ul>
-                    <li><Link to='/jeux/add'>ajouter jeux</Link></li>
-                    <li><Link to='/pong'>pong</Link></li>
-                    <li><Link to='/space_invaders'>space invaders</Link></li>
-                     {
+                    <li><Link to='/'>
+                            <img src="" alt="Home"/>
+                        </Link></li>
+                    <li><Link to='/jeux/all'>
+                            <img src="" alt="La bible"/>
+                        </Link></li>
+                    <li><Link to='/scores'>
+                            <img src="" alt="Scores"/>
+                        </Link></li>
+                     {/* {
                         profile?.admin === true ? <>
                             <li><Link to='/jeux/attente'>attente</Link></li>
                         </>
                         :null
-                     }
+                     } */}
                     <li><GoogleButton label='Connectez-vous' onClick={googleHandler}/></li>
                 </ul>
             </nav>

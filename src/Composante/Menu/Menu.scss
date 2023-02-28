@@ -1,0 +1,20 @@
+.menu {
+    display: flex;
+    justify-content: flex-end;
+    margin: .2em 0 2em 0;
+    span {
+        margin-left: 1em;
+    }
+    input {
+        border-radius: 0;
+        border: 1px solid black;
+        height: 100%;
+
+    }
+    .logoCompte {
+        img {
+            background-color: black;
+            color: white;
+        }
+    }
+}

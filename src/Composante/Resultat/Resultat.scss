@@ -1,0 +1,35 @@
+.navBible {
+    width: 100%;
+    ul {
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 1px solid black;
+        height: 2em;
+        div {
+            display: flex;
+            height: 90%;
+            li {
+                width: 12vw;
+                transition: .3s ease-in-out;
+                &:active, &.actif {
+                    font-weight: bold;
+                }
+            }
+            &:last-of-type {
+                li {
+                    width: 4vw;
+                    img {
+                        background-color: black;
+                        color: white;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.resultat {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}

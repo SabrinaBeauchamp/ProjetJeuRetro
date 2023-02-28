@@ -1,6 +1,6 @@
 import { authContext } from './Auth';
-import { doc, onSnapshot, setDoc, arrayUnion, arrayRemove, collection, addDoc, deleteDoc} from 'firebase/firestore';
-import React, { useState, useEffect, useContext, increment, updateDoc } from "react";
+import { doc, onSnapshot, setDoc, arrayUnion, arrayRemove, collection, addDoc, deleteDoc, increment, updateDoc} from 'firebase/firestore';
+import React, { useState, useEffect, useContext,  } from "react";
 import { db } from "../Config/firebase";
 const profileContext = React.createContext({
     user: null,
@@ -8,6 +8,7 @@ const profileContext = React.createContext({
     CompleterInscription : () => {},
     AddFormulaire : () => {},
     AddListes : () => {},
+    RecentView : () => {},
 });
 
 const {Provider} = profileContext;
@@ -25,10 +26,10 @@ const ProfileProvider = ({children}) => {
         }));      
         return unsub;
     },[user.uid]);
-
+    
     const CompleterInscription = async(genre, pseudonyme) => {
-        console.log(pseudonyme);
         const userRef = doc(db, 'Users', user.uid);
+        console.log(pseudonyme);
         await setDoc(userRef, {
             pseudonyme:pseudonyme,
         }, {merge:true})
@@ -51,10 +52,23 @@ const ProfileProvider = ({children}) => {
              
         }, {merge:true})
     }
+    const RecentView = async(id) => {
+        
+        
+        // var index = profile?.View;
+        console.log("add");
+        // const userRef = doc(db, 'Users', user.uid);
+        // await setDoc(userRef, {
+        //     Recent: {
+        //         [index]:id,
+        //     },
+        //     View: increment(1)
+        // }, {merge:true})
+    }
 
 
     return (
-        <Provider value={{user, profile, CompleterInscription, AddFormulaire , AddListes }}>
+        <Provider value={{user, profile, CompleterInscription, AddFormulaire , AddListes, RecentView }}>
             {children}
         </Provider>
     )

@@ -1,0 +1,76 @@
+.presentation {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 30em;
+    .fiche {
+        width: 18vw;
+        height: 18vw;
+        margin: 1em;
+        border: 1px solid black;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        .imgJeu {
+            width: 100%;
+            height: 80%;
+            img {
+                background-color: black;
+                color: white;
+            }
+        }
+        h1 {
+            height: 10%;
+            margin: auto;
+        }
+    }
+    .btn {
+        display: flex;
+        justify-content: space-around;
+        button {
+            width: 5em;
+        }
+    }
+}
+.description, .histoire, .categories {
+    width: 50%;
+    height: 20em;
+
+    h4 {
+        background-color: black;
+        color: white;
+        text-align: start;
+        width: 10em;
+        height: 2em;
+        padding: 0 .5em;
+    }
+    .txt {
+        border: 1px solid black;
+        height: 80%;
+        padding: .5em;
+    }
+}
+.gameplay {
+    padding: 5rem;
+    margin: auto;
+    background-color: black;
+    margin-bottom: 2em;
+    .screen {
+        background-color: grey;
+        height: 600px;
+        p {
+            text-align: center;
+        }
+    }
+}
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .categories {
+        width: 40%;
+        margin: auto;
+    }
+}

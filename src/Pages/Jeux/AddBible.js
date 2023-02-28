@@ -4,11 +4,16 @@ import { useContext, useEffect, useState } from "react";
 import { Input, TextArea } from '../../Data/Data';
 import { profileContext } from "../../Context/Profile";
 import { useNavigate } from "react-router-dom";
+import moment from "moment";
+moment.locale('fr-ca');
+
 
 const AddBible = () => {
     const {profile} = useContext(profileContext)
     const navigate = useNavigate();
+    const [date, setDate] = useState(moment().format() );
     const [isValid, setIsValid] = useState(false);
+    const maDate = new Date(date);
     const [formulaire, setFormulaire] = useState({
         approuver: false,
         categoriesId:"",
@@ -17,6 +22,13 @@ const AddBible = () => {
         nom:"",
         securiter:"",
         sources:"",
+        date: maDate,
+        unity: {
+            loaderUrl:"",
+            dataUrl:"",
+            frameworkUrl: "",
+            codeUrl: "",
+        }
         
     })
     const validate = () => {

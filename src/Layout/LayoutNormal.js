@@ -7,6 +7,8 @@ import { db } from '../Config/firebase';
 
 import { Head , MenuPrincipal} from "../Data/Data";
 
+import "./Layout.scss";
+
 
 const LayoutNormal =() => {
     
@@ -14,10 +16,10 @@ const LayoutNormal =() => {
     return(
         <>
             <Head/>
+            <div className='blank'></div>
             <main>
                 <Outlet/>
             </main>
-            <MenuPrincipal/>
         </>
     )
 }

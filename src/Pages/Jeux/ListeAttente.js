@@ -3,6 +3,7 @@ import { db } from '../../Config/firebase'
 import { useContext, useEffect, useState,  } from 'react';
 import { profileContext } from '../../Context/Profile';
 import { useNavigate } from 'react-router-dom';
+import moment from 'moment';
 
 const ListeAttente = () => {
     const [ allJeux, setAllJeux] = useState([]);
@@ -45,7 +46,7 @@ const ListeAttente = () => {
     return(
         <>
             {
-                allJeux?.map(({nom, description, conseil, securiter, categoriesId, auteur, sources, id, approuver},i) => (
+                allJeux?.map(({nom, description, conseil, securiter, categoriesId, auteur, sources, id, approuver, date},i) => (
                     
                     <div key={nom+1}>
                         {
@@ -59,6 +60,7 @@ const ListeAttente = () => {
                                     <p>{categoriesId}</p>
                                     <p>{auteur}</p>
                                     <p>{sources}</p>
+                                    <p>{moment(date.toDate()).format("MMM Do YY")}</p>
                                 </article>
                                 <button onClick={(e) =>onClickHandeler(id , false)}>Approuver</button>
                                 <button onClick={(e) =>onClickHandeler(id , true)}>Supprimer</button>

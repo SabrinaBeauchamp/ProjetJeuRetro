@@ -4,7 +4,7 @@ import { authContext } from "../Context/Auth";
 import { useContext } from "react";
 import {
    Formulaire, Accueil, LayoutProfile, LayoutNormal, Bible, Login, Load, 
-   ListeBible, Details, Profile, Corps, AddBible, ListeAttente, Contact, ProfileListes, AddContact, UnityWindow
+   ListeBible, Details, Profile, Corps, AddBible, ListeAttente, Contact, ProfileListes, AddContact, UnityWindow, Scores
 } from "../Data/Data";
 
 const App = () => {
@@ -31,6 +31,10 @@ const App = () => {
               element: <Formulaire/>
             },
             {
+              path: 'scores',
+              element: <Scores/>
+            },
+            {
               path: 'jeux',
               element: <Bible/>,
               children: [
@@ -44,13 +48,13 @@ const App = () => {
                 },
                 {
                   path: ':jeuId',
-                  element: <Details/>
-                  // children: [
-                  //   {
-                  //     index: true,
-                  //     element: <Navigate to="/jeux/:jeuxId/"
-                  //   }
-                  // ]
+                  element: <Details/>,
+                  children: [
+                    {
+                        index: true,
+                        element: < Navigate to='/jeux/:jeuId/' />
+                    },
+                ]
                 },
                 {
                   path: 'add',

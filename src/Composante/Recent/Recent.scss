@@ -1,0 +1,15 @@
+.recent {
+    margin-bottom: 4em;
+    section {
+        display: flex;
+        flex-wrap: wrap;
+        .boxRect {
+            width: 6em;
+            height: 6em;
+            margin: 1em;
+            img {
+                background-color: black;
+            }
+        }
+    }
+}
