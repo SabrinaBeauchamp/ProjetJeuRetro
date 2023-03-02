@@ -1,4 +1,6 @@
 import { useContext, useEffect, useState } from "react";
+import algoliasearch from 'algoliasearch/lite';
+import { InstantSearch, SearchBox, Hits } from 'react-instantsearch-dom';
 
 const Search = ({utilisateurs}) => {
     const [search, setSearch] = useState("");
@@ -11,11 +13,16 @@ const Search = ({utilisateurs}) => {
     const ChangerHandeler = (e) => {
         setSearch(e.target.value)
     }
+    const searchClient = algoliasearch('TJCM8B5990', 'd42ed511ce4cfa7a5a915948939745c4');
 
-    const Resultat = () => {
-        
+    const hitHandeler = ({hit}) => {
+        return(
+            <div className="hit">
+                <p>{hit.nom}</p>
+
+            </div>
+        )
     }
-    console.log(users[0])
     return(
         <>
             <form onSubmit={SubmitHandeler}>
@@ -29,6 +36,10 @@ const Search = ({utilisateurs}) => {
                     <p>{u.nom}</p>)
                     )
             }
+            <InstantSearch searchClient={searchClient} indexName="haha">
+                <SearchBox />
+                <Hits hitComponent={hitHandeler} />
+            </InstantSearch>
         </>
     )
 

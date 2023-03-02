@@ -24,8 +24,8 @@ const Head = () => {
                     <li><Link to='/jeux/all'>
                             <img src="" alt="La bible"/>
                         </Link></li>
-                    <li><Link to='/scores'>
-                            <img src="" alt="Scores"/>
+                    <li><Link to='/search'>
+                            <img src="" alt="Search"/>
                         </Link></li>
                      {/* {
                         profile?.admin === true ? <>

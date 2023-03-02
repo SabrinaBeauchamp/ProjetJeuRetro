@@ -4,7 +4,7 @@ import { authContext } from "../Context/Auth";
 import { useContext } from "react";
 import {
    Formulaire, Accueil, LayoutProfile, LayoutNormal, Bible, Login, Load, 
-   ListeBible, Details, Profile, Corps, AddBible, ListeAttente, Contact, ProfileListes, AddContact, UnityWindow, Scores, ProfileDetail
+   ListeBible, Details, Profile, Corps, AddBible, ListeAttente, Contact, ProfileListes, AddContact, UnityWindow, Scores, ProfileDetail, Search
 } from "../Data/Data";
 
 const App = () => {
@@ -33,6 +33,10 @@ const App = () => {
             {
               path: 'scores',
               element: <Scores/>
+            },
+            {
+              path: 'search',
+              element: <Search/>
             },
             {
               path: 'jeux',
