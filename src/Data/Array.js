@@ -44,16 +44,19 @@ export const completerIncsription = [
 export const options = [
     {
         nom:"aime",
+        url:"/img/imgs/posseder.png",
         titre:"J'aime",
         selected: false,
     },
     {
         nom:"maybe",
+        url:"/img/imgs/like.png",
         titre:"Peut-être",
         selected: false,
     },
     {
         nom:"nope",
+        url:"/img/imgs/nope.png",
         titre:"Pas intéresser",
         selected: false,
     },

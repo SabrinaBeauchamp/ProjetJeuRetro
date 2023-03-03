@@ -4,19 +4,23 @@
 @mixin base {
     html {
         box-sizing: border-box;
-        font-family: Georgia, 'Times New Roman', Times, serif;
+        font-family: 'VT323', monospace;
         font-weight: 400;
         font-size: 16px;
         text-align: left;
         letter-spacing: .105em;
         line-height: 1.4em;
-        background-color: $pureWhite;
+        background-color: #f5e9cd;
     }
     
     html, body{
         height: 100%;
         padding: 0;
         margin: 0;
+    }
+    h2 {
+        font-family: 'Bungee Shade', cursive;
+
     }
     
     /*[Affecte tous les enfants]*/
@@ -87,18 +91,29 @@
         border: none;
         padding: 1em 0;
         width: 3em;
-        background-color: black;
         color: white;
         transition: .3s ease-in;
         cursor:pointer;
         &:hover {
             color: $pureWhite;
-            background-color: $pink;
+            background-color: $green;
         }
     }
     .blank {
         width: 17%    }
     main {
-        width: 83.2%;
+        width: 90%;
+        margin: 0 auto;
+        // background-color: white;
+        z-index: 2;
+    }
+    #buttonGoogle {
+        background-image: url("../../../public/img/imgs/logOut.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        div {
+            display: none !important;
+        }
     }
 }

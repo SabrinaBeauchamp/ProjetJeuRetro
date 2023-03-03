@@ -14,18 +14,17 @@ const Head = () => {
         logout();
     }
     return(
-        <header className="sideBar">
-            <h1><Link to='/'>Logo</Link></h1>
+        <header className="sideBar box-shadow">
             <nav>
                 <ul>
                     <li><Link to='/'>
-                            <img src="" alt="Home"/>
+                            <img src="/img/imgs/home.png" alt="Home"/>
                         </Link></li>
                     <li><Link to='/jeux/all'>
-                            <img src="" alt="La bible"/>
+                            <img src="/img/imgs/bible.png" alt="La bible"/>
                         </Link></li>
                     <li><Link to='/search'>
-                            <img src="" alt="Search"/>
+                            <img src="/img/imgs/stats.png" alt="Search"/>
                         </Link></li>
                      {/* {
                         profile?.admin === true ? <>
@@ -33,7 +32,14 @@ const Head = () => {
                         </>
                         :null
                      } */}
-                    <li><GoogleButton label='Connectez-vous' onClick={googleHandler}/></li>
+                    <li>
+                    <GoogleButton style={{
+                        backgroundColor: '#E76F51',
+                        width: '90%',
+                        height: 'auto',
+                        margin: 'auto',
+                    }} 
+                    id="buttonGoogle" label='Déconnexion' onClick={googleHandler}/></li>
                 </ul>
             </nav>
         </header>

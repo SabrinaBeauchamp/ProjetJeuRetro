@@ -15,7 +15,14 @@ const Login =() => {
         <>
             <div className="bgImg"></div>
             <div className="login">
-                <GoogleButton label='Connectez-vous' onClick={googleHandler}/>
+            <GoogleButton style={{
+                        backgroundColor: '#E76F51',
+                        width: '90%',
+                        height: 'auto',
+                        margin: 'auto',
+                    }} 
+                    id="buttonGoogle" label='Connexion' onClick={googleHandler}/>
+                
             </div>
         
         </>

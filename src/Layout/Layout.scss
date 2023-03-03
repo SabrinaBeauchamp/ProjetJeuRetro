@@ -1,22 +1,31 @@
 @import "../Css/mixins/base";
+@import'../Css/mixins/colors';
 
 @include base;
 #root {
     display:  flex;
     .sideBar {
         margin: .3em;
-        border: 1px solid black;
+        margin-right: 0;
+        border: .2em solid $orange;
         height: 98vh;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        position: fixed;
+        position: sticky;
+        top: 0;
+        width: 9vw;
+        background-color: $brown;
         h1 {
             height: 2em;
         }
-        nav{ 
-            height: 50%;
+        nav {
+            height: 100%;
+            margin-top:100% ;
+        }
+        ul{ 
+            height: 100%;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -27,9 +36,10 @@
                 img {
                     width: 4em;
                     height: 4em;
-                    margin: auto;
-                    background-color: black;
                     color: white;
+                }
+                &:last-of-type {
+                    margin-top: 100%;
                 }
             }
         }

@@ -16,8 +16,8 @@ const LayoutNormal =() => {
     return(
         <>
             <Head/>
-            <div className='blank'></div>
-            <main>
+            {/* <div className='blank'></div> */}
+            <main className=''>
                 <Outlet/>
             </main>
         </>

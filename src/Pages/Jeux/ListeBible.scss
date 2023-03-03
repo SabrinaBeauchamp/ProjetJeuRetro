@@ -1,6 +1,22 @@
+@import "../../Css/mixins/colors";
+
 .header {
     height: 12em;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+.add {
+    background-color: $green;
+    width: 2.5em;
+    height: 2.5em;
+    border: .2em solid $Charcoal;
+    background-image: url("../../../public/img/imgs/add.png");
+    background-position: center;
+    background-size: 80%;
+    background-repeat: no-repeat;
+    a {
+        width: 2.5em;
+        height: 100%;
+    }
 }

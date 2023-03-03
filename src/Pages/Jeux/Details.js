@@ -49,11 +49,13 @@ const Details = () => {
                         </div>
                         <h1>{jeux?.nom}</h1>
                     </div>
-                    <div className="btn">
+                    <div className="btns">
                         {
-                            options?.map(({nom, selected}) => (
+                            options?.map(({nom, url, selected}) => (
                                 
-                                <button key={nom} onClick={(e)=>ClickHandeler(nom)} className={selected?"black" : "white"} >{nom}</button>
+                                <button key={nom} onClick={(e)=>ClickHandeler(nom)} className="btn" >
+                                    <img src={url}/>
+                                </button>
                                 ))
                             }
                     </div>
@@ -67,20 +69,41 @@ const Details = () => {
             </section>
             <section className="infos">
                 <section className="Unity">
-                    {
-                        jeux?.unity?.loaderUrl == "" ?
-                        <div className="gameplay">
-                            <div className="screen" >
-                                <p className="test">Le jeu est en préparation ... </p>
-                            </div>
+                    <span>
+                        <h3>Zone de jeu</h3> 
+                        <section className="bordure">
+                            <section className="screen">
+                                {
+                                    jeux?.unity?.loaderUrl == "" ?
+                                    <div className="gameplay">
+                                        <div className="screen" >
+                                        <p className="test">Le jeu est en préparation ... </p>
+                                        </div>
 
+                                    </div>
+                                    : 
+                                    <>
+                                        <UnityWindow url={jeux.unity}/> 
+                                    </>
+                                }
+
+                            </section>
+                        
+                        </section>
+                    </span>
+                <section className="instructions">
+                    <h4>instructions</h4>
+                    <article>
+                        <div>
+                            <h5>Joueur 1</h5>
+                            <p>Flêches</p>
                         </div>
-                        : 
-                        <>
-                            <p>tu ne devrais pas être la</p> 
-                            <UnityWindow url={jeux.unity}/> 
-                        </>
-                    }
+                        <div>
+                            <h5>Joueur 1</h5>
+                            <p>Flêches</p>
+                        </div>
+                    </article>
+                </section>
                 </section>
                 <section className="footer"> 
                     <section className="histoire">

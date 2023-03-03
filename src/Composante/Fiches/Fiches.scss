@@ -1,3 +1,5 @@
+@import '../../Css/mixins/colors';
+
 .boxJeu {
     width: 14vw;
     height: 14vw;
@@ -5,11 +7,10 @@
     border: 1px solid black;
     text-align: center;
     .img {
-        background-color: black;
         color: white;
         height: 90%;
     }
     .nom {
-
+        background-color: $pureWhite;
     }
 }

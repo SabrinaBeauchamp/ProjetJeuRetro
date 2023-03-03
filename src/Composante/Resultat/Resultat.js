@@ -2,7 +2,7 @@ import { useState, useEffect, useContext } from "react";
 import {Fiches} from "../../Data/Data";
 import moment from 'moment';
 import { profileContext } from '../../Context/Profile';
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { collection, onSnapshot, where, query } from 'firebase/firestore';
 import { db } from '../../Config/firebase'
 
@@ -42,6 +42,10 @@ const Resultat = ({}) => {
             RecentView(id);
         
     }
+    const navigate = useNavigate();
+    const newDir = () => {
+        navigate("/jeux/add");
+    }
 
     return (
         <section className="Recherche">
@@ -53,7 +57,7 @@ const Resultat = ({}) => {
                     </div>
                     <div>
                         <li>
-                            <img src="" alt="filtre" />
+                        <button className='add' onClick={()=>newDir()}></button>
                         </li>
                     </div>
                 </ul>

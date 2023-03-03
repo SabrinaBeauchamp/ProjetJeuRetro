@@ -1,4 +1,5 @@
 import { useContext, } from 'react';
+import { Link } from 'react-router-dom';
 import { authContext } from "../../Context/Auth";
 import { Load, Menu, Resultat } from '../../Data/Data';
 
@@ -14,8 +15,9 @@ const ListeBible = () => {
                     <>
                         <Menu/>
                         <div className='header'>
-                            <h2>Bienvenue dans la retro</h2>
+                            <h2>Bienvenue dans l'Arcade asile</h2>
                         </div>
+                        
                         <Resultat />
                     </>
                 :

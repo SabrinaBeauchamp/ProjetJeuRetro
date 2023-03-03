@@ -3,14 +3,14 @@ import "./Menu.scss"
 
 const Menu = () => {
     return(
-        <div className="menu">
+        <div className="menu  ">
             <span>
                 <input type="search" placeholder="Search ..." />
                 <button type="submit">Recherche</button>
             </span>
             <span className="logoCompte">
                 <Link to="/profile">
-                    <img src="" alt="compte" />
+                    <img src="/img/imgs/account.png" alt="compte" />
                 </Link>
             </span>
         </div>
