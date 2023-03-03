@@ -11,6 +11,7 @@ const profileContext = React.createContext({
     RecentView : () => {},
     ModifyProfil : () => {},
     DeleteProfil : () => {},
+    AddContact : () => {},
 });
 
 const {Provider} = profileContext;
@@ -61,6 +62,12 @@ const ProfileProvider = ({children}) => {
              
         }, {merge:true})
     }
+    const AddContact = async(nom) => {
+        const userRef = doc(db, 'Users', user.uid);
+        await setDoc(userRef, {
+            contact: arrayUnion(nom)
+        }, {merge:true})
+    }
     const RecentView = async(id) => {
         var index = profile?.View > 4 ? 0: profile?.View;
         console.log("add");
@@ -85,7 +92,7 @@ const ProfileProvider = ({children}) => {
 
 
     return (
-        <Provider value={{user, profile, CompleterInscription, AddFormulaire , AddListes, RecentView, ModifyProfil, DeleteProfil }}>
+        <Provider value={{user, profile, CompleterInscription, AddFormulaire , AddListes, RecentView, ModifyProfil, DeleteProfil, AddContact }}>
             {children}
         </Provider>
     )

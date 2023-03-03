@@ -1,25 +1,26 @@
-import { useContext, useEffect, useState } from "react";
+import { useContext, useState } from "react";
 import { profileContext } from "../../Context/Profile";
-import { collection, onSnapshot, where, query, getDocs } from 'firebase/firestore';
-import { db } from '../../Config/firebase'
-import { Link, Outlet } from "react-router-dom";
-import Formulaire from "../Formulaire";
+import { Link, useNavigate } from "react-router-dom";
 
+import './Profile.scss';
 
 const Profile = () => {
     const {profile} = useContext(profileContext);
-    const [navClick, setNavClick] = useState("Listes");
+    const navigate = useNavigate();
 
+    const newDir = (url) => {
+        navigate('/profile/listes/'+url);
+    }
 
     return(
             <>
             <section className="infosPerso">
-                <span className="img">
+                <div className="img">
                     <img src ="" alt="imagePerso"/>
-                </span>
+                </div>
                 <article className="fichePerso">
                     {
-                        profile?.formulaire[1].reponse == "oui" ?
+                        profile?.formulaire[1].reponse == "non" ?
                         <>
                             <h1>{profile?.nom}</h1>
                             <p>({profile?.pseudonyme})</p>
@@ -30,27 +31,30 @@ const Profile = () => {
                     }
                 </article>
             </section>
-            <nav>
+            <nav className="nav">
                 <ul>
-                    <li>
+                    <li className="On">
                             Listes</li>
-                    <li> <Link to="/profile/contact">
+                    <li className=""> <Link to="/profile/contact">
                             Contact 
                     </Link></li>
-                    <li> <Link to="/profile/moi">
+                    <li className=""> <Link to="/profile/moi">
                             Compte
                     </Link></li>
                 </ul>
             </nav>
             <section className="sectionscompte">
-                <button className="listes">
-                    <Link to="/profile/listes/aime">Possèder</Link>
+                <button className="posseder" onClick={()=>newDir('aime')}>
+                    <div className="posseder"></div>
+                    <p>Je possèdes</p>
                 </button>
-                <button className="contact">
-                    <Link to="/profile/listes/maybe">À acheter</Link>
+                <button className="aime" onClick={()=>newDir('maybe')}>
+                    <div className="aime"></div>
+                    <p>J'aime</p>
                 </button>
-                <button className="listes">
-                    <Link to="/profile/listes/nope">pas intéresser</Link>
+                <button className="nope" onClick={()=>newDir('nope')}>
+                    <div className="nope"></div>
+                    <p>Pas intéresser</p>
                 </button>
             </section>
         </>

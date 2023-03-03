@@ -4,12 +4,14 @@
     margin: .2em 0 2em 0;
     span {
         margin-left: 1em;
-    }
-    input {
-        border-radius: 0;
-        border: 1px solid black;
-        height: 100%;
-
+        display: flex;
+        justify-content: center;
+        input {
+            border: .2em solid black;
+            height: 100%;
+            width: 100%;
+    
+        }
     }
     .logoCompte {
         img {

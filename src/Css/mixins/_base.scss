@@ -4,7 +4,7 @@
 @mixin base {
     html {
         box-sizing: border-box;
-        font-family: 'VT323', monospace;
+        
         font-weight: 400;
         font-size: 16px;
         text-align: left;
@@ -27,6 +27,7 @@
     *,
     *::before,
     *::after {
+        font-family: 'VT323', monospace;
         -webkit-box-sizing: inherit;
         box-sizing: inherit;
         padding: 0;
@@ -86,6 +87,7 @@
     }
     input, select {
         border: none;
+        font-family: 'VT323', monospace
     }
     button {
         border: none;
@@ -115,5 +117,16 @@
         div {
             display: none !important;
         }
+    }
+    
+    .search {
+        background-image: url("../../../public/img/imgs/search.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-color: $pureWhite;
+        height: 100%;
+        border: .2em solid black;
+
     }
 }

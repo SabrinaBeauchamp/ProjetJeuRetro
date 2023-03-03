@@ -23,7 +23,7 @@ const Head = () => {
                     <li><Link to='/jeux/all'>
                             <img src="/img/imgs/bible.png" alt="La bible"/>
                         </Link></li>
-                    <li><Link to='/search'>
+                    <li><Link to='/scores'>
                             <img src="/img/imgs/stats.png" alt="Search"/>
                         </Link></li>
                      {/* {

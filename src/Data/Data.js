@@ -11,7 +11,7 @@ export { default as ListeBible } from "../Pages/Jeux/ListeBible";
 export { default as ListeAttente } from "../Pages/Jeux/ListeAttente";
 export { default as Details } from "../Pages/Jeux/Details";
 export { default as Profile } from "../Pages/Infos/Profile";
-export { default as Scores } from "../Pages/Infos/Scores";
+
 export { default as ProfileListes } from "../Pages/Infos/Listes";
 export { default as ProfileDetail } from "../Pages/Infos/ProfileDetail";
 export { default as Contact } from "../Pages/Infos/Contact/Contact";
@@ -31,3 +31,4 @@ export { default as Fiches } from "../Composante/Fiches/Fiches";
 export { default as Recent } from "../Composante/Recent/Recent";
 export { default as Menu } from "../Composante/Menu/Menu";
 export { default as UnityWindow } from "../Composante/Unity/UnityWindow";
+export { default as Scores } from "../Composante/Unity/Scores";

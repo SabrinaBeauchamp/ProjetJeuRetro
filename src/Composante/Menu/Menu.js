@@ -6,7 +6,7 @@ const Menu = () => {
         <div className="menu  ">
             <span>
                 <input type="search" placeholder="Search ..." />
-                <button type="submit">Recherche</button>
+                <button type="submit" className="search"></button>
             </span>
             <span className="logoCompte">
                 <Link to="/profile">

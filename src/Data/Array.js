@@ -61,3 +61,5 @@ export const options = [
         selected: false,
     },
 ]
+
+export const jeux = ["Pong", "Pacman", "Space Invaders", 'Démineur', 'Snake']
