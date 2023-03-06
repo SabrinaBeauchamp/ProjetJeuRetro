@@ -9,7 +9,7 @@ const Fiches = ({bible, clickFn}) => {
                     <Link key={id} to = {`/jeux/${nom}`} onClick={()=>clickFn(nom)}>
                         <article className="boxJeu" >
                             <div className="img">
-                                <img src={"../../../Public"+url != null ? url : "/img/Logos/logo.png"} alt="jeu" />
+                                <img src={url != null ? url : "/img/Logos/logo.png"} alt="jeu" />
                             </div>
                             <div className="nom">
                                 <h4>{nom}</h4>

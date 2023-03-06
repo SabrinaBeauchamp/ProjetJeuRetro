@@ -74,7 +74,7 @@ const Details = () => {
                         <section className="bordure">
                             <section className="screen">
                                 {
-                                    jeux?.unity?.loaderUrl == "" ?
+                                    jeux?.unity == "" ?
                                     <div className="gameplay">
                                         <div className="screen" >
                                         <p className="test">Le jeu est en préparation ... </p>

@@ -10,7 +10,7 @@ const Recent = ({recent}) => {
                     {
                         Object.keys(recent).map(r => (
                         <article key={"recent"+r} className="boxRect">
-                            <img src={"/img/Logos/"+recent[r]+".png"} alt={recent[r]} />
+                            <img src={"/img/Logos/"+recent[r].replace(' ', '')+".png"} alt={recent[r]} />
                         </article>
 
                         ))
