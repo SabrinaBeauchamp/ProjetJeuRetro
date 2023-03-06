@@ -63,7 +63,7 @@ const Details = () => {
                 <div className="description">
                     <h4>Description</h4>
                     <div className="txt">
-                        <p>lorem</p>
+                        <p>{jeux.description}</p>
                     </div>
                 </div>
             </section>
@@ -109,13 +109,18 @@ const Details = () => {
                     <section className="histoire">
                         <h4>Histoire</h4>
                         <div className="txt">
-                            <p>lorem</p>
+                            <p>{jeux.histoire}</p>
                         </div>
                     </section>
                     <section className="categories">
                         <h4>Categories</h4>
                         <div className="txt">
-                            <p>lorem</p>
+                            {
+                                Object.keys(jeux.categories).map((j) => (
+                                    <p key={jeux.categories[j]}>{jeux.categories[j]}</p>
+
+                                ))
+                            }
                         </div>
                     </section>
 
