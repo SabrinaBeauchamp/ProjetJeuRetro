@@ -1,5 +1,5 @@
 import { useState, useEffect, useContext } from "react";
-import {Fiches} from "../../Data/Data";
+import {Fiches, Recent} from "../../Data/Data";
 import moment from 'moment';
 import { profileContext } from '../../Context/Profile';
 import { Link, useNavigate } from "react-router-dom";
@@ -8,7 +8,7 @@ import { db } from '../../Config/firebase'
 
 import "./Resultat.scss";
 
-const Resultat = ({}) => {
+const Resultat = ({isAccueil}) => {
     const {profile, RecentView} = useContext(profileContext);
     const [isClick, setIsClick] = useState(false)
     const ClickHandelerMenu = () =>setIsClick(!isClick);
@@ -28,7 +28,7 @@ const Resultat = ({}) => {
     },[profile?.id])
 
     var newest = allJeux?.filter(j => moment(j.date.toDate()).format("MMM") === moment().format("MMM")).map(j => j)
-    
+    var recents = allJeux
     const Verif = (id) => {
         for (let index = 0; index < Object?.keys(profile?.Recent).length; index++) 
             if (profile?.Recent?.[index] === id ) 
@@ -37,40 +37,47 @@ const Resultat = ({}) => {
     }
 
     const ClickHandeler = async(id) => {
-        console.log(!Verif(id));
         if (!Verif(id))
             RecentView(id);
-        
     }
+
     const navigate = useNavigate();
     const newDir = () => {
         navigate("/jeux/add");
     }
 
     return (
-        <section className="Recherche">
-            <nav className="navBible">
-                <ul>
-                    <div>
-                        <li onClick={(e) => ClickHandelerMenu()} className={isClick ? `actif`: ""} >Les nouveautées</li>
-                        <li onClick={(e) => ClickHandelerMenu()} className={!isClick ? `actif`: ""} >La bible</li>
-                    </div>
-                    <div>
-                        <li>
-                        <button className='add' onClick={()=>newDir()}></button>
-                        </li>
-                    </div>
-                </ul>
-            </nav>
-            <section className="resultat">
-                {
-                    isClick ?
-                    <Fiches bible={newest} clickFn={ClickHandeler}/>
-                    :
-                    <Fiches bible={allJeux} clickFn={ClickHandeler}/>
-                }
+        <>
+        {
+            isAccueil ?
+                <Recent recent={profile.Recent}/>
+                :
+                null
+        }
+            <section className="Recherche">
+                <nav className="navBible">
+                    <ul>
+                        <div>
+                            <li onClick={(e) => ClickHandelerMenu()} className={isClick ? `actif`: ""} >Les nouveautées</li>
+                            <li onClick={(e) => ClickHandelerMenu()} className={!isClick ? `actif`: ""} >La bible</li>
+                        </div>
+                        <div>
+                            <li>
+                            <button className='add' onClick={()=>newDir()}></button>
+                            </li>
+                        </div>
+                    </ul>
+                </nav>
+                <section className="resultat">
+                    {
+                        isClick ?
+                        <Fiches bible={newest} clickFn={ClickHandeler}/>
+                        :
+                        <Fiches bible={allJeux} clickFn={ClickHandeler}/>
+                    }
+                </section>
             </section>
-        </section>
+        </>
     )
 }
 export default (Resultat);

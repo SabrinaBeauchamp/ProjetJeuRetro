@@ -1,0 +1,79 @@
+@import '../../Css/mixins/colors';
+
+.tableau {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    margin: auto ;
+    height: 100vh;
+    color: white;
+    .jeux {
+        width: 20%;
+        height: 80%;
+        border: .2em solid black;
+        background-color: rgb(36, 36, 36);
+        padding: 1em;
+        margin-right: 2em;
+        p {
+            cursor: pointer;
+            transition: .3s ease-in-out;
+            &:hover {
+                color: $green;
+                font-weight: bold;
+            }
+        }
+    }
+    .scores {
+        width: 70%;
+        height: 80%;
+        border: .2em solid black;
+        background-color: rgb(36,36,36);
+        padding: 1em;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        position: relative;
+        div {
+            position: absolute;
+            height: 100vw;
+            width: 100vw;
+            background-repeat: repeat;
+            background-size: 10%;
+            opacity: .5;
+            transform: rotate(30deg);
+            animation:bg-scrolling-reverse 30s infinite;
+            animation-timing-function:linear;
+        }
+        section {
+            width: 50%;
+            height: 100%;
+            z-index: 1;
+            border: .2em solid black;
+            background-color: rgb(36,36,36);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            overflow: auto;
+            padding: .2em;
+
+            article {
+                width: 90%;
+                display: flex;
+                justify-content: space-between;
+            }
+            button {
+                border: .2em solid black;
+                color: black;
+                width: 70%;
+            }
+        }
+    }
+}
+
+/* Animations */
+@keyframes bg-scrolling-reverse {
+    100% { background-position: 50vw  10vw; }
+  }

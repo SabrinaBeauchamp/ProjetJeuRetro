@@ -40,7 +40,7 @@ const ProfileProvider = ({children}) => {
     const AddFormulaire = async(formulaire, pseudonyme, nom) => {
         const userRef = doc(db, 'Users', user.uid);
         await setDoc(userRef, {
-            formulaire: formulaire,
+            formulaire,
             pseudonyme: pseudonyme,
             nom: nom,
             liste:"",

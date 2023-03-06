@@ -16,7 +16,7 @@ const Profile = () => {
             <>
             <section className="infosPerso">
                 <div className="img">
-                    <img src ="" alt="imagePerso"/>
+                    <img src ="/img/Compte/moumou_log.png" alt="imagePerso"/>
                 </div>
                 <article className="fichePerso">
                     {

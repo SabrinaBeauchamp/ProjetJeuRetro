@@ -5,7 +5,11 @@ import { Input, TextArea } from '../../Data/Data';
 import { profileContext } from "../../Context/Profile";
 import { useNavigate } from "react-router-dom";
 import moment from "moment";
+import "./AddBible.scss";
+import Checkbox from "../../Composante/Input/CheckBox";
+import { categorie } from "../../Data/Array"
 moment.locale('fr-ca');
+
 
 
 const AddBible = () => {
@@ -16,21 +20,16 @@ const AddBible = () => {
     const maDate = new Date(date);
     const [formulaire, setFormulaire] = useState({
         approuver: false,
-        categoriesId:"",
-        conseil:"",
+        histoire:"",
         description:"",
         nom:"",
-        securiter:"",
-        sources:"",
         date: maDate,
-        unity: {
-            loaderUrl:"",
-            dataUrl:"",
-            frameworkUrl: "",
-            codeUrl: "",
-        }
+        unity: "",
+        url:"",
         
     })
+    const [categories, setCategories] = useState(categorie);
+    const [isDone, setIsDone] = useState(false);
     const validate = () => {
         return formulaire.nom.length;
     }
@@ -38,7 +37,7 @@ const AddBible = () => {
         const isValid = validate();
         setIsValid(isValid)
 
-    },[formulaire.sources])
+    },[formulaire.histoire])
 
 
     const updateBible = (texte, props) => {
@@ -49,27 +48,58 @@ const AddBible = () => {
             }
         });
     };
-    console.log(formulaire);
+
+    const ChangeHandeler = (nom) => {
+        setCategories(
+            categories?.map((c) =>(
+                c.nom === nom ? {...c, selected: !c.selected} : {...c}
+            ))
+        )
+    }
+    var categorieSelect = categories?.filter(c => c.selected).map(c=>c.nom)
+
     const ClickHandeler = async(e) => {
         e.preventDefault();
         const userRef = await addDoc(collection(db, 'Jeux'), {
             ...formulaire,
             auteur:profile?.pseudonyme,
+            categories: categorieSelect,
         })
-        navigate("/profile")
+        setIsDone(true);
+        
     }
     return(
-         <>
-             <h2>Ajouter une jeu dans la bible</h2>
-             <form onSubmit={ClickHandeler}>
-                <Input label="nom" type="text" text="Le nom du jeu" ChangeFn={(e) => updateBible(e.target.value, "nom")}/>
-                <TextArea label="description" text="La description du jeu" ChangeFn={(e) => updateBible(e.target.value, "description")}/>
-                <TextArea label="securiter" text="L'histoire du jeu" ChangeFn={(e) => updateBible(e.target.value, "securiter")}/>
-                <TextArea label="sources" text="metter vos source sur la jeu" ChangeFn={(e) => updateBible(e.target.value, "sources")}/>
-                <TextArea label="instructions" text="Le but du jeu et les contrôles" ChangeFn={(e) => updateBible(e.target.value, "sources")}/>
-                <button onClick={ClickHandeler} disabled={!isValid}>Soumettre votre jeu retro dans la bible</button>
-            </form>
-         </>
+        <>
+        {
+            !isDone ?
+            <section className="formAdd">
+                <h2>Ajouter un jeu dans la bible</h2>
+                <form onSubmit={ClickHandeler}>
+                    <div className="presentation">
+                        <div className="ficheAdds">
+                            <div className="img"><img src=""/></div>
+                            <div className="input">
+                                <Input label="nom" type="text" text="Le nom du jeu" nameFn={updateBible}/>
+                            </div>
+
+                        </div>
+                    </div>
+                    <Checkbox categorie={categories} changeFn={ChangeHandeler}/>
+                    <TextArea label="description" text="La description du jeu" ChangeFn={(e) => updateBible(e.target.value, "description")}/>
+                    <TextArea label="securiter" text="L'histoire de sa création" ChangeFn={(e) => updateBible(e.target.value, "histoire")}/>
+                    <button onClick={ClickHandeler} disabled={!isValid}>Rentrer votre pièce</button>
+                </form>
+            </section>
+            :
+            <section className="submission">
+                <h2>Merci d'avoir investi dans l'asile de l'arcade</h2>
+                <p>Votre jeu sera bientôt prêt</p>
+                <button onClick={()=>navigate("/")}>Retourner dans l'asile</button>
+            </section>
+
+        }
+        
+        </>
     )
 }
 export default(AddBible);

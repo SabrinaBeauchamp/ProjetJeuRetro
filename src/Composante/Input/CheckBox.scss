@@ -1,0 +1,14 @@
+.categories {
+    display: flex;
+    flex-wrap: wrap;
+    border: .2em solid black;
+    padding: 1em;
+    height: 80%;
+    width: 80%;
+    div{
+        width: 40%;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+    }
+}

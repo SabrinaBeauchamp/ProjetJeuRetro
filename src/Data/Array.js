@@ -1,4 +1,61 @@
-const categorie = ["Jeux plateforme", "FPS", "RPG", "MMORPG", "MOBA", "Jeux horreur", "hack'n slash", "RTS", "Jeux sport", "Jeux de réflexion", "Jeux 'Blockade'", "Jeux arcade", "Jeux d'aventure"]
+export const categorie = [
+    {
+        nom:"Plateformeur",
+        selected: false,
+    },
+    {
+        nom:"FPS",
+        selected: false,
+    },
+    {
+        nom:"RPG",
+        selected: false,
+    },
+    {
+        nom:"MMORPG",
+        selected: false,
+    },
+    {
+        nom: "MOBA",
+        selected: false,
+    },
+    {
+        nom:"Horreur",
+        selected: false,
+    },
+    {
+        nom:"hack'n slash",
+        selected: false,
+    },
+    {
+        nom:"RTS",
+        selected: false,
+    },
+    {
+        nom:"Sport",
+        selected: false,
+    },
+    {
+        nom:"Stratégie",
+        selected: false,
+    },
+    {
+        nom: "Jeux 'Blockade'",
+        selected: false,
+    },
+    {
+        nom:"Jeux arcade",
+        selected: false,
+    },
+    {
+        nom:"Aventure",
+        selected: false,
+    },
+    {
+        nom:"Metroidvania",
+        selected: false,
+    },
+]
 export const choix =[
     {
         nom:"oui",

@@ -1,7 +1,7 @@
-const Input = ({label, type, text, ChangeFn, choix, nameFn}) => {
+const Input = ({label, type, text, ChangeFn, choix, nameFn, value}) => {
     return(
         <>
-            <p className="question">{text}</p>
+            <h3 className="question">{text}</h3>
             { 
                 type !== "text" ?
                     choix?.map(({nom, selected}, i) => ( 
@@ -12,7 +12,7 @@ const Input = ({label, type, text, ChangeFn, choix, nameFn}) => {
                     ))
                     : 
                     <>
-                        <input type={type} id={label} name={label}  onChange={(e) =>nameFn(e.target.value, label)}/>
+                        <input type={type} id={label} name={label}  onChange={(e) =>nameFn(e.target.value, label)} value={value}/>
                     </>
                     
             

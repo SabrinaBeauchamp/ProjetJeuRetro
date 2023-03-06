@@ -1,26 +1,20 @@
 import "./Recent.scss";
 
-const Recent = () => {
+const Recent = ({recent}) => {
+    
     return (
         <>
             <section className="recent">
                 <h2>Récents consulté</h2>
                 <section>
-                    <article className="boxRect">
-                        <img src="" alt="img-jeu" />
-                    </article>
-                    <article className="boxRect">
-                        <img src="" alt="img-jeu" />
-                    </article>
-                    <article className="boxRect">
-                        <img src="" alt="img-jeu" />
-                    </article>
-                    <article className="boxRect">
-                        <img src="" alt="img-jeu" />
-                    </article>
-                    <article className="boxRect">
-                        <img src="" alt="img-jeu" />
-                    </article>
+                    {
+                        Object.keys(recent).map(r => (
+                        <article key={"recent"+r} className="boxRect">
+                            <img src={"/img/Logos/"+recent[r]+".png"} alt={recent[r]} />
+                        </article>
+
+                        ))
+                    }
                 </section>
             </section>
         </>

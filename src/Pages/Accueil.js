@@ -1,28 +1,25 @@
 import { useContext } from "react";
 import { profileContext } from "../Context/Profile";
 import { authContext } from "../Context/Auth";
-import { Formulaire, Load, Recent, Resultat, UnityWindow, Menu} from "../Data/Data";
+import { Formulaire, Load, Resultat, Menu} from "../Data/Data";
 
 const Accueil = () => {
     const {profile} = useContext(profileContext);
     const {isLoading} = useContext(authContext);
     return(
-        
-            !isLoading ? 
+        !isLoading ? 
+        <>
+        {
+            !profile?.formulaire ?
+                <Formulaire/>
+            : 
             <>
-            {
-                    !profile?.formulaire ?
-                        <Formulaire/>
-                    : 
-                    <>
-                        <Menu/>
-                        <Recent/>
-                        <Resultat/>
-                    </>
-                }
-                </>
-            :<Load/>
-        
+                <Menu />
+                <Resultat isAccueil={true}/>
+            </>
+        }
+        </>
+        :<Load/>
     )
 }
 export default(Accueil);
