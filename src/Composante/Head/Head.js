@@ -17,8 +17,8 @@ const Head = () => {
         <header className="sideBar box-shadow">
             <nav>
                 <ul>
-                    <li><Link to='/'>
-                            <img src="/img/imgs/home.png" alt="Home"/>
+                    <li><Link to="/profile">
+                        <img src="/img/imgs/account.png" alt="compte" />
                         </Link></li>
                     <li><Link to='/jeux/all'>
                             <img src="/img/imgs/bible.png" alt="La bible"/>

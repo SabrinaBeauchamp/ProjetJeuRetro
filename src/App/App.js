@@ -20,7 +20,7 @@ const App = () => {
           children: [ 
             {
               index: true,
-              element:<Navigate to='/acceuil' replace/>
+              element:<Navigate to='/profile' replace/>
             },
             {
               path: 'acceuil',

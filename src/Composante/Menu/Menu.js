@@ -9,9 +9,7 @@ const Menu = () => {
                 <button type="submit" className="search"></button>
             </span>
             <span className="logoCompte">
-                <Link to="/profile">
-                    <img src="/img/imgs/account.png" alt="compte" />
-                </Link>
+                
             </span>
         </div>
     )

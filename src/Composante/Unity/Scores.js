@@ -1,6 +1,6 @@
 import { collection, onSnapshot, where, query, orderBy } from 'firebase/firestore';
 import { useContext, useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { db } from '../../Config/firebase'
 import { profileContext } from'../../Context/Profile';
 import { jeux } from '../../Data/Array';
@@ -12,6 +12,7 @@ const Scores = () => {
     const [scores, setScores] = useState([]);
     const [scoresJeu, setScoresJeu] = useState([]);
     const [nom, setNom] = useState('');
+    const navigate = useNavigate();
     
     useEffect(() => {
         const getDocument = () => {
@@ -30,7 +31,7 @@ const Scores = () => {
     })
 
     const ChangeArray = (nom) => {
-        setNom(nom.replace(' ', ''));
+        setNom( nom === "Démineur" ? "Demineur" :nom);
         setScoresJeu();
         setScoresJeu(scores?.filter(s => s.jeu === nom).map(s =>s))
     } 
@@ -44,7 +45,7 @@ const Scores = () => {
                 {ArrayGame}
                 </section>
                 <section className='scores'>
-                    <div className='bg' style ={{backgroundImage:"url(/img/Logos/"+nom.trim()+".png)",}}></div>
+                    <div className='bg' style ={{backgroundImage:"url(/img/Logos/"+nom.replace(' ', '')+".png)",}}></div>
                     <section>
                     {
                         nom != '' ?
@@ -57,7 +58,7 @@ const Scores = () => {
 
                                     ))
                                     :
-                                    <button><Link to={"/jeux/"+nom}>Aller jouer</Link></button>
+                                    <button onClick={() => navigate("/jeux/"+nom)}>Aller jouer</button>
                                 
                         : 
                         <p>Sélectionner un jeu</p>

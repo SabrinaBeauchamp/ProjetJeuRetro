@@ -14,6 +14,7 @@ import "./Details.scss";
 
 const Details = () => {
     const {jeuId} = useParams();
+    console.log(jeuId);
     const [jeux, setJeux] = useState({});
     const { AddListes } = useContext(profileContext);
 
@@ -42,14 +43,8 @@ const Details = () => {
             jeux?.id != null?
             <>
             <section className="presentation">
-                <span>
-                    <div className="fiche">
-                        <div className="imgJeu">
-                            <img scr="" alt="img-jeu" />
-                        </div>
-                        <h1>{jeux?.nom}</h1>
-                    </div>
-                    <div className="btns">
+                <h2>{jeux?.nom}</h2>
+                <div className="btns">
                         {
                             options?.map(({nom, url, selected}) => (
                                 
@@ -59,13 +54,39 @@ const Details = () => {
                                 ))
                             }
                     </div>
-                </span>
+                
+            </section>
+            <section className="footer"> 
                 <div className="description">
                     <h4>Description</h4>
                     <div className="txt">
                         <p>{jeux.description}</p>
                     </div>
                 </div>
+                    <section className="histoire">
+                        <h4>Histoire</h4>
+                        <div className="txt">
+                            <p>{jeux.histoire}</p>
+                        </div>
+                    </section>
+                    <section className="categories">
+                        <h4>Categories</h4>
+                        <div className="txt">
+                            {
+                                Object.keys(jeux.categories).map((j) => (
+                                    <p key={jeux.categories[j]}>{jeux.categories[j]}</p>
+
+                                ))
+                            }
+                        </div>
+                    </section>
+                
+                    
+
+                </section>
+            <section className="part-1">
+                
+
             </section>
             <section className="infos">
                 <section className="Unity">
@@ -91,40 +112,8 @@ const Details = () => {
                         
                         </section>
                     </span>
-                <section className="instructions">
-                    <h4>instructions</h4>
-                    <article>
-                        <div>
-                            <h5>Joueur 1</h5>
-                            <p>Flêches</p>
-                        </div>
-                        <div>
-                            <h5>Joueur 1</h5>
-                            <p>Flêches</p>
-                        </div>
-                    </article>
                 </section>
-                </section>
-                <section className="footer"> 
-                    <section className="histoire">
-                        <h4>Histoire</h4>
-                        <div className="txt">
-                            <p>{jeux.histoire}</p>
-                        </div>
-                    </section>
-                    <section className="categories">
-                        <h4>Categories</h4>
-                        <div className="txt">
-                            {
-                                Object.keys(jeux.categories).map((j) => (
-                                    <p key={jeux.categories[j]}>{jeux.categories[j]}</p>
-
-                                ))
-                            }
-                        </div>
-                    </section>
-
-                </section>
+                
             </section>
             </>
             :

@@ -20,7 +20,7 @@ const Profile = () => {
                 </div>
                 <article className="fichePerso">
                     {
-                        profile?.formulaire[1].reponse == "non" ?
+                        profile?.formulaire?.[1].reponse == "non" ?
                         <>
                             <h1>{profile?.nom}</h1>
                             <p>({profile?.pseudonyme})</p>
