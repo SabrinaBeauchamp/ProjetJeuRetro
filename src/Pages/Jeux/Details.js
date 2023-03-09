@@ -11,12 +11,14 @@ import UnityWindow from "../../Composante/Unity/UnityWindow";
 import { Load } from "../../Data/Data";
 
 import "./Details.scss";
+import PopUp from "../../Composante/PopUp/PopUp";
 
 const Details = () => {
     const {jeuId} = useParams();
     console.log(jeuId);
     const [jeux, setJeux] = useState({});
     const { AddListes } = useContext(profileContext);
+    const [nomListe, SetNomListe] = useState('');
 
     useEffect(() => {
         const getDocument = () => {
@@ -29,8 +31,22 @@ const Details = () => {
         getDocument() 
     },[jeuId])
     console.log(jeux?.unity)
+    var timer = 0;
+
+    useEffect(() => {
+        if (timer === 0) {
+            const interval = setInterval(() => {
+                timer++;
+                    if (timer >= 2)
+                        SetNomListe('');
+                  }, 1000);
+                  return () =>  clearInterval(interval); 
+
+        }
+    }, [nomListe])
     
     const ClickHandeler = async(nom) => {
+        SetNomListe(nom);
         var p = {
             nom: jeux.nom,
             categorie: nom
@@ -54,6 +70,7 @@ const Details = () => {
                                 ))
                             }
                     </div>
+                    <PopUp slogan={''} nomJeu={jeux?.nom} nomliste={nomListe}/>
                 
             </section>
             <section className="footer"> 

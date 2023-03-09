@@ -1,0 +1,65 @@
+@import"../Css/mixins/colors";
+
+.intro {
+    width: 100vw;
+    height: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    .titre-site {
+        text-align: center;
+        background-color: $Charcoal;
+        padding: 2em;
+        color: white;
+        font-size: 4em;
+    }
+    
+    .explication {
+        height: 50vh;
+        display: flex;
+        justify-content: center;
+        .but, .login {
+            width: 100%;
+        }
+        .but {
+            padding: 2em;
+            height: 100%;
+            h3 {
+                background-color: black;
+                color: white;
+                width: 30%;
+                padding: .2em;
+            }
+            div {
+                border: .2em solid black;
+                width: 100%;
+                height: 100%;
+            }
+        }
+        .login {
+            position: relative;
+            height: 50vh;
+            display: flex;
+            align-items: flex-end;
+            .btnGoogle {
+                width: 100%;
+                position: relative;
+            }
+            .mascotte {
+                position: absolute;
+                width: 50%;
+                height: 80%;
+                top: -140%;
+                left: 25%;
+                right: 25%;
+                padding: 0;
+                .pop-up {
+                    top: -300%;
+                }
+                .img {
+                    width: 50%;
+                }
+            }
+        }
+    }
+}

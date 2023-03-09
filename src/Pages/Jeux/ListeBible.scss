@@ -1,22 +1,42 @@
 @import "../../Css/mixins/colors";
-
-.header {
-    height: 12em;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.add {
-    background-color: $brown;
-    width: 2.5em;
-    height: 2.5em;
-    border: .2em solid $orange;
-    background-image: url("../../../public/img/imgs/add.png");
-    background-position: center;
-    background-size: 80%;
-    background-repeat: no-repeat;
-    a {
-        width: 2.5em;
-        height: 100%;
+.bible {
+    .header {
+        width: 100%;
+        height: 17em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: $Charcoal;
+        h2 {
+            font-size: 3em;
+            color: white;
+        }
     }
+    .add {
+        background-color: $brown;
+        width: 2.5em;
+        height: 2.5em;
+        border: .2em solid $orange;
+        background-image: url("../../../public/img/imgs/add.png");
+        background-position: center;
+        background-size: 80%;
+        background-repeat: no-repeat;
+        a {
+            width: 2.5em;
+            height: 100%;
+        }
+    }
+    section.resultat {
+        height: 50em;
+        overflow-y: autos;
+    }
+    .section-add {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: $brown;
+        height: 7em;
+    }
+
 }

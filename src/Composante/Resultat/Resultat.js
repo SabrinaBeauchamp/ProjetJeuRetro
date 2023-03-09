@@ -42,9 +42,7 @@ const Resultat = ({isAccueil}) => {
     }
 
     const navigate = useNavigate();
-    const newDir = () => {
-        navigate("/jeux/add");
-    }
+   
 
     return (
         <>
@@ -63,7 +61,6 @@ const Resultat = ({isAccueil}) => {
                         </div>
                         <div>
                             <li>
-                            <button className='add' onClick={()=>newDir()}></button>
                             </li>
                         </div>
                     </ul>

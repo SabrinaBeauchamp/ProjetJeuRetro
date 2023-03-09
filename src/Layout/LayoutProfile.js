@@ -7,6 +7,7 @@ const LayoutProfile = () => {
     return (
         <>
         <ProfileProvider>
+            <Head/>
             <LayoutNormal/>
         </ProfileProvider>
             
