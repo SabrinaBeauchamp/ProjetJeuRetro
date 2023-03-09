@@ -3,21 +3,20 @@ import { profileContext } from "../../Context/Profile";
 import { Link, useNavigate } from "react-router-dom";
 
 import './Profile.scss';
+import PopUp from "../../Composante/PopUp/PopUp";
+import Listes from "../../Composante/Listes/Listes";
+import Contact from "./Contact/Contact";
+import ProfileDetail from "./ProfileDetail";
 
 const Profile = () => {
     const {profile} = useContext(profileContext);
-    const navigate = useNavigate();
+    const [menu, setMenu] = useState('liste');
 
-    const newDir = (url) => {
-        navigate('/profile/listes/'+url);
-    }
+    const MenuHandeler = (nom) => setMenu(nom)
 
     return(
             <>
             <section className="infosPerso">
-                <div className="img">
-                    <img src ="/img/Compte/moumou_log.png" alt="imagePerso"/>
-                </div>
                 <article className="fichePerso">
                     {
                         profile?.formulaire?.[1].reponse == "non" ?
@@ -27,35 +26,31 @@ const Profile = () => {
                         </>
                         :
                         <h1>{profile?.pseudonyme}</h1>
-
+                        
                     }
                 </article>
             </section>
-            <nav className="nav">
-                <ul>
-                    <li className="On">
-                            Listes</li>
-                    <li className=""> <Link to="/profile/contact">
-                            Contact 
-                    </Link></li>
-                    <li className=""> <Link to="/profile/moi">
-                            Compte
-                    </Link></li>
-                </ul>
-            </nav>
-            <section className="sectionscompte">
-                <button className="posseder" onClick={()=>newDir('aime')}>
-                    <div className="posseder"></div>
-                    <p>Je possèdes</p>
-                </button>
-                <button className="aime" onClick={()=>newDir('maybe')}>
-                    <div className="aime"></div>
-                    <p>J'aime</p>
-                </button>
-                <button className="nope" onClick={()=>newDir('nope')}>
-                    <div className="nope"></div>
-                    <p>Pas intéresser</p>
-                </button>
+            <section className="infos-profile">
+                <nav className="nav">
+                    <ul>
+                        <li onClick={() => MenuHandeler('liste')} className={menu === 'liste' ? 'On' : ''}> Listes</li>
+                        <li onClick={() => MenuHandeler('contact')} className={menu === 'contact' ? 'On' : ''}> Contact </li>
+                        {/* <li onClick={() => MenuHandeler('Compte')} className={menu === 'Compte' ? 'On' : ''}>  Compte</li> */}
+                    </ul>
+                    <PopUp slogan={'Bienvenue dans votre compte ' + profile?.nom } nomliste=''/>
+                </nav>
+                <section className="sectionscompte">
+                    {
+                        menu != "liste" ?
+                            menu === 'contact' ?
+                            <Contact/>
+                            :
+                            <ProfileDetail/>
+                        :
+                        <Listes/>
+                    }
+                </section>
+
             </section>
         </>
     )

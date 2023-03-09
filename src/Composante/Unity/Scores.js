@@ -38,10 +38,9 @@ const Scores = () => {
 
     return(
         <>
-            <h2>Scores</h2>
+            <h2 className='page-score'>Scores</h2>
             <section className='tableau'>
                 <section className='jeux'>
-                    {/* <h3>Jeux vidéos</h3> */}
                 {ArrayGame}
                 </section>
                 <section className='scores'>

@@ -1,0 +1,51 @@
+.show-membre {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    .back {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 10%;
+        border: .2em solid black;
+        color: black;
+    }
+    h2 {
+        width: 100%;
+        text-align: center;
+        font-size: 2em;
+        height: auto;
+        padding: .5em;
+    }
+    .categories-membre {
+        div {
+            border: .2em solid white;
+            font-size: .5em;
+        }
+    }
+    .box-white {
+        width: 80%;
+        height: 80%;
+
+        .liste-membre {
+            border: .2em solid white;
+            display: flex;
+            width: 90%;
+            height: 80%;
+            text-align: center;
+            justify-content: stretch;
+            font-size: .5em ;
+            div {
+                width: 100%;
+            }
+            .liste {
+                color: white;
+                width: 100%;
+            }
+        }
+
+    }
+ }

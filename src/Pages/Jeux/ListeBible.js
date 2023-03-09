@@ -1,7 +1,7 @@
-import { useContext, } from 'react';
+import { useContext, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { authContext } from "../../Context/Auth";
-import { Load, Menu, Resultat } from '../../Data/Data';
+import { Load, Menu, Resultat, Search } from '../../Data/Data';
 
 import "./ListeBible.scss";
 

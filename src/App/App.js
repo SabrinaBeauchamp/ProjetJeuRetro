@@ -76,32 +76,8 @@ const App = () => {
               element: <Profile/>,
             },
             {
-              path:'profile/contact',
-              element:<Contact/>
-            },
-            {
-              path:'profile/contact/ajouter',
-              element:<AddContact/>
-            },
-            {
-              path:'profile/listes/:listeId',
-              element:<ProfileListes/>,
-            },
-            {
-              path:'profile/moi',
-              element:<ProfileDetail/>,
-            },
-            {
               path:'scores',
               element: <Scores/>
-            },
-            {
-              path:'pong',
-              element: <UnityWindow dossier={"Pong/Build"}/>
-            },
-            {
-              path:'space_invaders',
-              element: <UnityWindow dossier={"SpaceInvaders/Build"}/>
             },
             {
               path: '*',

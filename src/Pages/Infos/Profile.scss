@@ -2,99 +2,103 @@
 @import '../../Css/mixins/colors';
 
 .infosPerso {
-    margin: auto;
     width: 100%;
-    height: 30em;
+    padding: 4em;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
-    .img {
-        border: .2em solid black;
-        width: 20em;
-        height: 20em;
-    }
+    background-color: $Charcoal;
     article {
         text-align: center;
+        color: white;
         h1 {
+            font-family: 'Bungee Shade', cursive;
             font-size: 3em;
             // height: 3em;
             margin: .5em;
         }
     }
+}.infos-profile {
+    display: flex;
+    margin: 2em;
+    height: auto;
 }
 .nav {
-    width: 100%;
-    height: 5em;
+    width: 30%;
+    height: 60vh;
     ul {
-        width: 100%;
+        width: 80%;
+        height: 50%;
         display: flex;
-        justify-content: space-around;
+        flex-direction: column;
+        justify-content: stretch;
         align-items: center;
+        border: .2em solid black;
         li {
-            font-size: 1.5em;
+            font-size: 1.2em;
             position: relative;
             width: 100%;
             text-align: center;
-            &::after {
-                content: "";
-                background-color: $pureWhite;
-                width: 100%;
-                height: .2em;
-                position: absolute;
-                left: 0;
-                bottom: -.4em;
-            }
+            padding: 1em;
+            // height: 100%;
+            // &::after {
+            //     content: "";
+            //     background-color: $pureWhite;
+            //     width: 100%;
+            //     height: .2em;
+            //     position: absolute;
+            //     left: 0;
+            //     bottom: -.4em;
+            // }
             &.On {
                 font-weight: bolder;
-                &::after {
-                    background-color: black;
-                }
+                background-color: $orange;
+                border: .2em solid $brown;
+                color: white;
+                
             }
             
+        }
+    }
+    .mascotte {
+        margin-top: 1em;
+        position: unset;
+        padding: 0;
+        width: 80%;
+        height: 50%;
+        .pop-up {
+            position: unset;
+        }
+        .img{
+            width: 100%;
+            height: 100%;
         }
     }
 }
 .sectionscompte {
+    width: 70%;
     display: flex;
-    justify-content: stretch;
-    height: 7em;
-    button {
-        background-color: $orange;
-        border: .2em solid $brown;
+    height: 60vh;
+    .box  {
+        align-items: flex-start;
+        border: .2em solid black;
+        background-color: rgb(36, 36, 36);
+        color: white;
         width: 100%;
         height: 100%;
         position: relative;
         overflow: hidden;
-        div  {
-            position: absolute;
-            width: 110%;
-            height: 110%;
-            z-index: 1;
-            top: 2em;
-
-        }
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         p {
-            font-family: 'Bungee Shade', cursive;
-            color: white;
-            font-size: 2em;
-            z-index: 2;
-            position: absolute;
-            bottom: 20%;
-            right: 0;
-            left:0;
-        }
-        .aime {
-            @include setImg('../../../public/img/imgs/like.png', left bottom, contain);
-          
-        }
-        .posseder {
-            @include setImg('../../../public/img/imgs/posseder.png', left bottom, contain);
-            
-        }
-        .nope {
-            @include setImg('../../../public/img/imgs/nope.png', left bottom, contain);
-        }
-    }
+            text-align: center;
+            width: 100%;
+            font-size: 1.5em;
+            margin-top: .5em;
+            font-weight: bolder;
 
+        }
     }
+}

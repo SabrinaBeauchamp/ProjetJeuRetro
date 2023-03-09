@@ -1,5 +1,5 @@
 import { useState, useEffect, useContext } from "react";
-import {Fiches, Recent} from "../../Data/Data";
+import {Fiches, Recent, Search} from "../../Data/Data";
 import moment from 'moment';
 import { profileContext } from '../../Context/Profile';
 import { Link, useNavigate } from "react-router-dom";
@@ -10,9 +10,11 @@ import "./Resultat.scss";
 
 const Resultat = ({isAccueil}) => {
     const {profile, RecentView} = useContext(profileContext);
-    const [isClick, setIsClick] = useState(false)
-    const ClickHandelerMenu = () =>setIsClick(!isClick);
+    const [isClick, setIsClick] = useState('bible')
     const [ allJeux, setAllJeux] = useState([]);
+    const [seaching, setSearching] = useState(false);
+    const IsSearching = () => setSearching(true);
+    
     
     useEffect(() => {
         const getDocument = () => {
@@ -41,7 +43,10 @@ const Resultat = ({isAccueil}) => {
             RecentView(id);
     }
 
-    const navigate = useNavigate();
+    const ClickMenu = (nom) => {
+        setIsClick(nom);
+        setSearching(false)
+    }
    
 
     return (
@@ -52,28 +57,37 @@ const Resultat = ({isAccueil}) => {
                 :
                 null
         }
-            <section className="Recherche">
-                <nav className="navBible">
-                    <ul>
-                        <div>
-                            <li onClick={(e) => ClickHandelerMenu()} className={isClick ? `actif`: ""} >Les nouveautées</li>
-                            <li onClick={(e) => ClickHandelerMenu()} className={!isClick ? `actif`: ""} >La bible</li>
-                        </div>
-                        <div>
-                            <li>
-                            </li>
-                        </div>
-                    </ul>
-                </nav>
-                <section className="resultat">
+            <section className="bible-resultat">
+                    <nav className="navBible">
+                        <ul>
+                            <div>
+                                <li onClick={() => ClickMenu('new')} className={isClick === 'new'? `actif`: ""} >Les nouveautées</li>
+                                <li onClick={() => ClickMenu('bible')} className={isClick === 'bible' ? `actif`: ""} >La bible</li>
+                            </div>
+                            <div>
+                                <li>
+                                </li>
+                            </div>
+                        </ul>
+                    </nav>
+                <section className="Recherche">
                     {
-                        isClick ?
-                        <Fiches bible={newest} clickFn={ClickHandeler}/>
-                        :
-                        <Fiches bible={allJeux} clickFn={ClickHandeler}/>
+                        !seaching ?
+                        <section className="resultat">
+                            {
+                                isClick != 'bible' ?
+                                <Fiches bible={newest} clickFn={ClickHandeler}/>
+                                :
+                                <Fiches bible={allJeux} clickFn={ClickHandeler}/>
+                            }
+                        </section>
+                        : null
                     }
+                    <Search indexName={"haha"} IsSearching={IsSearching} seaching={seaching} />
                 </section>
+
             </section>
+    
         </>
     )
 }

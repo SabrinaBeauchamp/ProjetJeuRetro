@@ -2,9 +2,10 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    align-items: center;
-    margin-top: 1em;
+    align-items: center;    
     position: relative;
+    width: 100%;
+    height: 100%;
     .retour {
         position: absolute;
         top:0;
@@ -13,5 +14,15 @@
     }
     h1 {
         font-family: 'Bungee Shade', cursive;
+    }
+    .ais-SearchBox {
+        margin: .5em;
+        align-self: end;
+        form {
+            height: 100%;
+            input{
+                height: 100%;
+            }
+        }
     }
 }

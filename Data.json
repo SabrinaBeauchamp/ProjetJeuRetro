@@ -1,48 +1,211 @@
 [
   {
-    "nom": "Sabrina Beauchamp",
-    "liste": {
-      "Gvu1LfAcvEL8V7l8VKTA": "Fg"
-    },
+    "View": 5,
+    "pseudonyme": "pat",
     "categories": {
-      "Gvu1LfAcvEL8V7l8VKTA": "maybe"
+      "KZJieLBZz00gIL9ZbcqC": "maybe"
+    },
+    "liste": {
+      "KZJieLBZz00gIL9ZbcqC": "Pacman"
+    },
+    "nom": "Patrick Watt-charron",
+    "Recent": {
+      "0": "Démineur",
+      "1": "Snake",
+      "2": "Space Invaders",
+      "3": "Pacman",
+      "4": "Pong"
     },
     "formulaire": [
       {
-        "label": "2",
-        "type": "text",
-        "text": "Votre pseudonyme?",
-        "nom": "question_1",
-        "reponse": "oui"
-      },
-      {
-        "nom": "question_2",
-        "label": "2",
-        "text": "voulez-vous qu'on utilise votre nom ou votre pseudonyme?",
+        "label": 1,
         "reponse": "non",
-        "type": "checkbox"
+        "question": "voulez-vous cacher votre nom?"
       },
       {
-        "label": "3",
-        "reponse": "oui",
-        "nom": "question_3",
-        "type": "checkbox",
-        "text": "selectionner quelle categorie de jeu que vous aimer jouer?"
+        "question": "selectionner quelle categorie de jeu que vous aimer jouer?",
+        "label": 2,
+        "reponse": [
+          "Horreur",
+          "Stratégie",
+          "Jeux arcade"
+        ]
       },
       {
-        "nom": "question_4",
-        "type": "checkbox",
-        "text": "Est-ce que vous accepter de rendre public vos liste aux autres utilisateur? ",
         "reponse": "oui",
-        "label": "4"
+        "label": 3,
+        "question": "Est-ce que vous accepter de rendre public vos liste aux autres utilisateur?"
       }
     ],
-    "View": 2,
-    "pseudonyme": "llama",
+    "__collections__": {}
+  },
+  {
+    "pseudonyme": "Skippayy",
+    "nom": "skippayy",
+    "View": 5,
+    "contact": [
+      "Sabrina Beauchamp"
+    ],
     "Recent": {
-      "0": "Gvu1LfAcvEL8V7l8VKTA",
-      "1": "fwY51dJcPJj80lvPaGWJ"
+      "0": "Pong",
+      "1": "Pacman",
+      "2": "Space Invaders",
+      "3": "Snake",
+      "4": "Démineur"
+    },
+    "liste": {
+      "cOXJ3NpoYlCvv9WuuchW": "Pong"
+    },
+    "categories": {
+      "cOXJ3NpoYlCvv9WuuchW": "maybe"
+    },
+    "formulaire": [
+      {
+        "label": 1,
+        "reponse": "oui",
+        "question": "voulez-vous cacher votre nom?"
+      },
+      {
+        "label": 2,
+        "reponse": [
+          "Plateformeur",
+          "FPS",
+          "RPG",
+          "MMORPG",
+          "Horreur",
+          "hack'n slash",
+          "RTS",
+          "Stratégie",
+          "Jeux arcade",
+          "Aventure",
+          "Metroidvania"
+        ],
+        "question": "selectionner quelle categorie de jeu que vous aimer jouer?"
+      },
+      {
+        "reponse": "oui",
+        "question": "Est-ce que vous accepter de rendre public vos liste aux autres utilisateur?",
+        "label": 3
+      }
+    ],
+    "__collections__": {}
+  },
+  {
+    "pseudonyme": "LAUSAN",
+    "liste": {
+      "D5rVzHV1DBf9nLI1Wzxw": "Snake",
+      "KZJieLBZz00gIL9ZbcqC": "Pacman"
+    },
+    "categories": {
+      "KZJieLBZz00gIL9ZbcqC": "nope",
+      "D5rVzHV1DBf9nLI1Wzxw": "maybe"
+    },
+    "nom": "Sandra Laurendeau",
+    "Recent": {
+      "0": "Pacman",
+      "1": "Snake",
+      "2": "Pong",
+      "3": "Space Invaders",
+      "4": "Démineur"
+    },
+    "formulaire": [
+      {
+        "label": 1,
+        "question": "voulez-vous cacher votre nom?"
+      },
+      {
+        "reponse": [
+          "Sport"
+        ],
+        "label": 2,
+        "question": "selectionner quelle categorie de jeu que vous aimer jouer?"
+      },
+      {
+        "reponse": "non",
+        "question": "Est-ce que vous accepter de rendre public vos liste aux autres utilisateur?",
+        "label": 3
+      }
+    ],
+    "View": 5,
+    "__collections__": {}
+  },
+  {
+    "nom": "Sabrina Beauchamp",
+    "formulaire": [
+      {
+        "question": "voulez-vous cacher votre nom?",
+        "label": 1,
+        "reponse": "non"
+      },
+      {
+        "reponse": [
+          "Plateformeur"
+        ],
+        "label": 2,
+        "question": "selectionner quelle categorie de jeu que vous aimer jouer?"
+      },
+      {
+        "label": 3,
+        "reponse": "oui",
+        "question": "Est-ce que vous accepter de rendre public vos liste aux autres utilisateur?"
+      }
+    ],
+    "categories": {
+      "cOXJ3NpoYlCvv9WuuchW": "aime",
+      "KZJieLBZz00gIL9ZbcqC": "nope"
+    },
+    "pseudonyme": "Llama the best",
+    "Recent": {
+      "0": "Pong",
+      "1": "Space Invaders",
+      "2": "Snake",
+      "3": "Pacman",
+      "4": "Démineur"
+    },
+    "liste": "",
+    "View": 5,
+    "__collections__": {}
+  },
+  {
+    "categories": {
+      "KZJieLBZz00gIL9ZbcqC": "maybe",
+      "6kB5bLKyLMHYOaE6yo2s": "maybe"
+    },
+    "formulaire": [
+      {
+        "label": 1,
+        "question": "voulez-vous cacher votre nom?",
+        "reponse": "non"
+      },
+      {
+        "label": 2,
+        "question": "selectionner quelle categorie de jeu que vous aimer jouer?",
+        "reponse": [
+          "Plateformeur",
+          "RPG",
+          "hack'n slash",
+          "Metroidvania"
+        ]
+      },
+      {
+        "reponse": "oui",
+        "label": 3,
+        "question": "Est-ce que vous accepter de rendre public vos liste aux autres utilisateur?"
+      }
+    ],
+    "nom": "Stego",
+    "pseudonyme": "Max_",
+    "View": 5,
+    "liste": "",
+    "contact": [
+      "Sabrina Beauchamp"
+    ],
+    "Recent": {
+      "0": "Pong",
+      "1": "Pacman",
+      "2": "Space Invaders",
+      "3": "Snake",
+      "4": "Démineur"
     },
     "__collections__": {}
-  }
-]
+  }]
