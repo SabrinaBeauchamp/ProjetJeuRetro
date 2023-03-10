@@ -36,22 +36,22 @@
 
     /* width */
 ::-webkit-scrollbar {
-    width: 10px;
+    width: .5em;
   }
   
   /* Track */
   ::-webkit-scrollbar-track {
-    background: #f1f1f1; 
+    background: #f5e9cd; 
   }
    
   /* Handle */
   ::-webkit-scrollbar-thumb {
-    background: #888; 
+    background: $orange; 
   }
   
   /* Handle on hover */
   ::-webkit-scrollbar-thumb:hover {
-    background: #555; 
+    background: $green; 
   }
     
     /*[Reset des liens]*/

@@ -1,5 +1,15 @@
 @import '../../Css/mixins/colors';
 
+.array_score {
+    .mascotte {
+        position: fixed;
+        top: unset;
+        bottom: 2em;
+        left: unset;
+        right: 0;
+        
+    }
+}
 .page-score {
     text-align: center;
     padding: 2em;
@@ -25,6 +35,9 @@
         p {
             cursor: pointer;
             transition: .3s ease-in-out;
+            margin: .5em .2em ;
+            padding: .2em;
+            border: .2em solid white;
             &:hover {
                 color: $green;
                 font-weight: bold;

@@ -1,13 +1,14 @@
 import { addDoc, collection } from "firebase/firestore";
 import  { db } from '../../Config/firebase';
 import { useContext, useEffect, useState } from "react";
-import { Input, TextArea } from '../../Data/Data';
+import { Input, TextArea } from '../../Data/Pages';
 import { profileContext } from "../../Context/Profile";
 import { useNavigate } from "react-router-dom";
 import moment from "moment";
 import "./AddBible.scss";
 import Checkbox from "../../Composante/Input/CheckBox";
 import { categorie } from "../../Data/Array"
+import PopUp from "../../Composante/PopUp/PopUp";
 moment.locale('fr-ca');
 
 
@@ -72,12 +73,12 @@ const AddBible = () => {
         <>
         {
             !isDone ?
-            <section className="formAdd">
+            <section className="formAdd jeu">
                 <h2>Ajouter un jeu dans la bible</h2>
-                <form onSubmit={ClickHandeler}>
+                <form onSubmit={ClickHandeler} className="formJeu">
                     <div className="presentation">
                         <div className="ficheAdds">
-                            <div className="img"><img src=""/></div>
+                            <div className="img"><img src="/img/Logos/logo.png"/></div>
                             <div className="input">
                                 <Input label="nom" type="text" text="Le nom du jeu" nameFn={updateBible}/>
                             </div>
@@ -93,8 +94,8 @@ const AddBible = () => {
             :
             <section className="submission">
                 <h2>Merci d'avoir investi dans l'asile de l'arcade</h2>
-                <p>Votre jeu sera bientôt prêt</p>
-                <button onClick={()=>navigate("/")}>Retourner dans l'asile</button>
+                <PopUp slogan={'Votre jeu sera bientôt prêt'} nomliste='' />
+                <button onClick={()=>navigate("/jeux/all")}>Retourner dans l'asile</button>
             </section>
 
         }

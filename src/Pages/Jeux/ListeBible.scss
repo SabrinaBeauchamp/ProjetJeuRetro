@@ -39,4 +39,15 @@
         height: 7em;
     }
 
+    .mascotte {
+        position: fixed;
+        top: unset;
+        bottom: 2em;
+        left: unset;
+        right: 0;
+        .pop-up {
+            bottom: 160%;
+        }
+    }
+
 }

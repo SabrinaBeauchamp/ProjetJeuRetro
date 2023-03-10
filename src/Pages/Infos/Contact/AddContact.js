@@ -1,4 +1,4 @@
-import {Search} from "../../../Data/Data";
+import {Search} from "../../../Data/Pages";
 import { useContext, useEffect, useState } from "react";
 import { profileContext } from "../../../Context/Profile";
 import { collection, onSnapshot, where, query, getDocs } from 'firebase/firestore';

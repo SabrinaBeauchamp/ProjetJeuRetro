@@ -6,7 +6,7 @@ import { collection, onSnapshot, where, query, getDocs } from 'firebase/firestor
 import { db } from '../Config/firebase';
 import GoogleButton from 'react-google-button'
 
-import { Nav, Accueil, Head }from "../Data/Data";
+import { Nav, Accueil, Head }from "../Data/Pages";
 
 
 const Connection =() => {

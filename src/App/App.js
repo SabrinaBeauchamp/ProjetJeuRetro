@@ -5,7 +5,7 @@ import { useContext } from "react";
 import {
    Formulaire, Accueil, LayoutProfile, LayoutNormal, Bible, Login, Load, 
    ListeBible, Details, Profile, AddBible, ListeAttente, Contact, ProfileListes, AddContact, UnityWindow, Scores, ProfileDetail, Search
-} from "../Data/Data";
+} from "../Data/Pages";
 
 const App = () => {
   const {user, isLoading} = useContext(authContext);

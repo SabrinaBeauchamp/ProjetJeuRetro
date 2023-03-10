@@ -26,7 +26,7 @@ const ListeDetails = ({ListeHandeler, liste, option}) => {
                     ShowListe
                     :null
                 }
-                <span onClick={() => ListeHandeler('aime')} className="dropdown">.</span>
+                <span onClick={() => ListeHandeler('aime')} className="dropdown"><img src="/img/arrow_down.png"/></span>
             </div>
             <div className="aime ">
                 <p>J'aime</p>
@@ -35,7 +35,7 @@ const ListeDetails = ({ListeHandeler, liste, option}) => {
                     ShowListe
                     :null
                 }
-                <span onClick={() => ListeHandeler('maybe')} className="dropdown">.</span>
+                <span onClick={() => ListeHandeler('maybe')} className="dropdown"><img src="/img/arrow_down.png"/></span>
             </div>
             <div className="nope ">
                 <p>Pas intéresser</p>
@@ -44,7 +44,7 @@ const ListeDetails = ({ListeHandeler, liste, option}) => {
                     ShowListe
                     :null
                 }
-                <span onClick={() => ListeHandeler("nope")} className="dropdown">.</span>
+                <span onClick={() => ListeHandeler("nope")} className="dropdown"><img src="/img/arrow_down.png"/></span>
             </div></>
     )
 }

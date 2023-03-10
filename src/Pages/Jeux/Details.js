@@ -8,7 +8,7 @@ import { profileContext } from "../../Context/Profile";
 import { options, } from "../../Data/Array";
 import UnityWindow from "../../Composante/Unity/UnityWindow";
 
-import { Load } from "../../Data/Data";
+import { Load } from "../../Data/Pages";
 
 import "./Details.scss";
 import PopUp from "../../Composante/PopUp/PopUp";
@@ -45,8 +45,8 @@ const Details = () => {
         }
     }, [nomListe])
     
-    const ClickHandeler = async(nom) => {
-        SetNomListe(nom);
+    const ClickHandeler = async(nom, titre) => {
+        SetNomListe(titre);
         var p = {
             nom: jeux.nom,
             categorie: nom
@@ -62,9 +62,9 @@ const Details = () => {
                 <h2>{jeux?.nom}</h2>
                 <div className="btns">
                         {
-                            options?.map(({nom, url, selected}) => (
+                            options?.map(({nom, url, titre}) => (
                                 
-                                <button key={nom} onClick={(e)=>ClickHandeler(nom)} className="btn" >
+                                <button key={nom} onClick={(e)=>ClickHandeler(nom,titre)} className="btn" >
                                     <img src={url}/>
                                 </button>
                                 ))
@@ -115,7 +115,7 @@ const Details = () => {
                                     jeux?.unity == "" ?
                                     <div className="gameplay">
                                         <div className="screen" >
-                                        <p className="test">Le jeu est en préparation ... </p>
+                                            <PopUp slogan={'Le jeu est en préparation ...'} nomliste=''/>
                                         </div>
 
                                     </div>

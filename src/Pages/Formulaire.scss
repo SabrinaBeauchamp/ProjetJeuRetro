@@ -1,5 +1,7 @@
-.formulaireInit {
+@import"../Css/mixins/colors";
 
+.formulaireInit {
+    margin: auto;
     button {
         border: .2em solid black;
         color: black;
@@ -23,5 +25,20 @@
         div {
             width: 50%;
         }
+    }
+}
+.formAdd {
+    width: 100%;
+    h2 {
+        background-color: $Charcoal;
+        color: white;
+        width: 100%;
+        padding: 2em;
+        font-size: 2em;
+        text-align: center;
+    }
+    .formulaireInit {
+        width: 80%;
+        margin-top:1em ;
     }
 }

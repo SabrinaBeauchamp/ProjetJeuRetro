@@ -14,14 +14,14 @@ const Login =() => {
             <h2 className="titre-site">L'Asile de L'Arcade</h2>
             <section className="explication">
                 <section className="but">
-                    <h3>but</h3>
+                    <h3>Description</h3>
                     <div className="txt">
-                        Lorem
+                        L'Asile de L'Arcade est une application de jeux rétro qui vous permet de revivre la nostalgie et d'apprendre sur les jeux rétro, de soumettre des demandes de jeux, d'enregistrer vos scores et de partager vos préférences de jeux.
                     </div>
                 </section>
                 <section className="login">
                 <div className="btnGoogle">
-                <PopUp nomliste={''} slogan="viens essayer des jeux vidéo rétro avec moi"/>
+                <PopUp nomliste={''} slogan="'Je me sers de ChatGPT pour m'assister dans la rédaction de mes phrases.'"/>
                     <GoogleButton style={{
                                 backgroundColor: '#E76F51',
                                 width: '70%',

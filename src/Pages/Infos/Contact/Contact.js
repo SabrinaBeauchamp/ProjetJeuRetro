@@ -1,6 +1,6 @@
 import { useContext, useState} from "react";
 import { profileContext } from "../../../Context/Profile";
-import { Search } from "../../../Data/Data";
+import { Search } from "../../../Data/Pages";
 
 import './Contact.scss';
 const Contact = () => {

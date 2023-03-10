@@ -25,4 +25,38 @@
             }
         }
     }
+    .ais-Hits-list {
+
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    
+        .ais-Hits-item {
+            width: 20%;
+            height: 9em;
+            border: .2em solid white;
+            margin: .2em;
+            .hit {
+                height: 100%;
+            }
+            .resultat {
+                display: flex;
+                flex-direction: column;
+                justify-content: center ;
+                height: 100%;
+                p {
+                    height: 25%;
+    
+                }
+                button {
+                    width: 80%;
+                    margin: auto;
+                    height: auto;
+                    color: black;
+                    border: .2em solid black;
+                    
+                }
+            }
+        }
+    }
 }

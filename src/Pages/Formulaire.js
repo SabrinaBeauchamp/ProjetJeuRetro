@@ -1,6 +1,6 @@
 import {
      Input, Load
-} from "../Data/Data";
+} from "../Data/Pages";
 import { choix, completerIncsription, categorie } from "../Data/Array";
 import { useContext, useState, useEffect } from "react";
 import { profileContext } from "../Context/Profile";
@@ -11,7 +11,7 @@ import Checkbox from "../Composante/Input/CheckBox";
 import "./Formulaire.scss";
 
 const Formulaire = () => {
-    const { user } = useContext(authContext)
+    const { user, isLoading } = useContext(authContext)
     const [choixReponse, setChoix] = useState(choix);
     const [choixReponse2, setChoix2] = useState(choix);
     const {profile, AddFormulaire} = useContext(profileContext)
@@ -83,13 +83,14 @@ const Formulaire = () => {
     return(
         <>
         {
+            profile?.formulaire?.length > 0 ?
             !isDone ?
             <section className="formAdd">
                 <h2>Formulaire</h2>
                 <form onSubmit={ClickHandeler} className="formulaireInit">
                     <div className="presentation">
                         <div className="ficheAdds">
-                            <div className="img"><img src=""/></div>
+                            <div className="img"><img src="/img/Compte/moumou_site.png"/></div>
                             <div className="input">
                                 <Input label="pseudonyme" type="text" text="Votre Pseudonyme" nameFn={updateNom}/>
                             </div>
@@ -115,6 +116,7 @@ const Formulaire = () => {
                 <button onClick={()=>navigate("/")}>Retourner dans l'asile</button>
             </section>
 
+    : <Load/>
         }
         
         </>

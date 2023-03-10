@@ -1,8 +1,53 @@
-
-  [{
-    "histoire": " Le jeu est orignaire des années entre 60 et 70. Il est un des premier jeux sur ordinateur. Le concepteur c'est inspirer du de Jerimac Ratltiff \"Cube\"",
-    "auteur": "Llama the best",
+[
+  {
+    "nom": "Sonic the Hedgehog",
+    "url": "",
     "approuver": true,
+    "categories": [
+      "Plateformeur"
+    ],
+    "auteur": "Llama the best",
+    "description": "Sonic the Hedgehog est un jeu de plateforme développé par Sega en 1991. Dans ce jeu, le joueur contrôle Sonic, un hérisson bleu rapide qui doit sauver ses amis animaux capturés par le méchant Dr Eggman. Le joueur doit sauter et courir à travers des niveaux remplis d'ennemis, de pièges et de bonus. Le jeu a été acclamé pour sa jouabilité rapide et son style visuel coloré. Sonic est devenu la mascotte de Sega et a été suivi par de nombreux autres jeux dans la série Sonic.",
+    "date": {
+      "__datatype__": "timestamp",
+      "value": {
+        "_seconds": 1678432700,
+        "_nanoseconds": 0
+      }
+    },
+    "unity": "",
+    "histoire": "Sonic the Hedgehog est un jeu vidéo développé par la société japonaise Sonic Team et édité par Sega. Le jeu a été créé par Yuji Naka, Naoto Ohshima et Hirokazu Yasuhara. Il est sorti pour la première fois en 1991 et a rapidement connu un succès commercial et critique, devenant le jeu le plus vendu de Sega Genesis. Sonic est devenu l'un des personnages de jeux vidéo les plus emblématiques de tous les temps, avec de nombreux titres de la série Sonic the Hedgehog publiés depuis la sortie initiale. Le gameplay rapide et fluide de Sonic, ainsi que son design unique et sa bande sonore entraînante, ont permis de définir le genre de plateforme pendant de nombreuses années.",
+    "__collections__": {}
+  },
+  {
+    "unity": "",
+    "url": "",
+    "nom": "Castlevania",
+    "description": "Castlevania est un jeu d'action-aventure développé et édité par Konami pour la console NES en 1986. Le jeu suit le chasseur de vampires Simon Belmont alors qu'il tente de vaincre le comte Dracula et sauver sa famille de la malédiction de Dracula. Le gameplay de Castlevania est centré autour de l'exploration de niveaux de plateforme en 2D, où le joueur doit combattre des ennemis à l'aide de fouets et d'autres armes. Les joueurs peuvent également acquérir des objets tels que des cœurs, qui sont utilisés pour activer des armes spéciales. Castlevania a été influencé par les films d'horreur classiques et les romans gothiques, ce qui explique l'ambiance sombre et sinistre du jeu.",
+    "auteur": "Llama the best",
+    "histoire": "Castlevania est un jeu vidéo de type action-aventure développé et édité par Konami. Il est sorti en 1986 sur NES. Le jeu met en scène le personnage de Simon Belmont, un chasseur de vampires qui doit parcourir le château de Dracula pour le vaincre. Castlevania a été un grand succès et a engendré de nombreuses suites et spin-offs, ainsi que des adaptations sur d'autres consoles. Le gameplay est caractérisé par des niveaux à défilement horizontal et une forte dose d'action, avec des ennemis à combattre et des obstacles à éviter. Le jeu est également connu pour sa bande-son mémorable, composée par Kinuyo Yamashita.",
+    "categories": [
+      "Aventure"
+    ],
+    "date": {
+      "__datatype__": "timestamp",
+      "value": {
+        "_seconds": 1678435552,
+        "_nanoseconds": 0
+      }
+    },
+    "approuver": true,
+    "__collections__": {}
+  },
+  {
+    "histoire": "Le jeu Démineur a été créé en 1989 par Robert Donner pour le système d'exploitation Windows 3.0 de Microsoft. Initialement conçu comme un exercice pour apprendre à utiliser la souris, le jeu consiste à déminer un champ de mines terrestres en utilisant des indices pour déterminer l'emplacement des mines cachées. Le jeu a été un succès immédiat auprès des joueurs Windows et a été inclus dans toutes les versions de Windows jusqu'à Windows 8. Malgré sa simplicité, le jeu reste populaire et est considéré comme l'un des jeux classiques les plus emblématiques de l'histoire des jeux vidéo.",
+    "categories": [
+      "Stratégie"
+    ],
+    "auteur": "Llama the best",
+    "unity": "https://i.simmer.io/@llama/demineur",
+    "nom": "Démineur",
+    "description": "Le jeu Démineur est un jeu de réflexion et de logique. Le joueur doit déminer un terrain en utilisant des indices qui indiquent la présence de mines cachées. Pour cela, il doit cliquer sur des cases qui révèlent soit un chiffre indiquant le nombre de mines adjacentes, soit une case vide qui permet de continuer à déminer sans danger. Si le joueur clique sur une mine, le jeu est perdu. Le but est de déminer toutes les cases sans faire exploser de mines, tout en essayant de le faire dans le temps le plus court possible pour obtenir un meilleur score. Le jeu se termine lorsque toutes les cases sont déminées ou lorsque le joueur clique sur une mine.",
     "date": {
       "__datatype__": "timestamp",
       "value": {
@@ -10,16 +55,17 @@
         "_nanoseconds": 0
       }
     },
-    "nom": "Démineur",
+    "approuver": true,
     "url": "/img/Logos/Demineur.png",
-    "description": "Le but est de révéler toute les tuiles qui ne contien pas de mine. Le click droit de la sourie permet de mettre des drapeau aux endroits que vous suspecter d'une bombe et click gauche pour révéler la tuile.\n\nLe nombre de mine est afficher en haut à gauche et il réduit à chaque fois qu'on place un drapeau. Il faudra faire attention car si vous en mettez trop le chiffre sera négatif",
-    "unity": "https://i.simmer.io/@llama/demineur",
-    "categories": [
-      "Stratégie"
-    ],
     "__collections__": {}
   },
-   {
+  {
+    "histoire": "Le célèbre jeu vidéo Snake a été créé en 1976 par la société Gremlin Industries. Au départ, le jeu était jouable sur bornes d'arcade et consistait à contrôler un serpent qui grandissait en mangeant des points. Cependant, le jeu n'a vraiment connu une popularité mondiale qu'à partir de 1998, lorsque Nokia a décidé d'inclure Snake dans ses téléphones mobiles. Cette décision a transformé le jeu en un phénomène de la culture populaire, permettant à des millions de joueurs de jouer à Snake partout où ils allaient. Depuis sa création, Snake a continué à évoluer et à s'adapter aux nouvelles technologies, restant l'un des jeux les plus populaires de tous les temps.",
+    "url": "/img/Logos/Snake.png",
+    "categories": [
+      "Stratégie",
+      "Jeux 'Blockade'"
+    ],
     "date": {
       "__datatype__": "timestamp",
       "value": {
@@ -27,29 +73,39 @@
         "_nanoseconds": 0
       }
     },
-    "url": "/img/Logos/Snake.png",
-    "approuver": true,
-    "auteur": "Llama the best",
-    "unity": "https://i.simmer.io/@llama/snake",
-    "categories": [
-      "Stratégie",
-      "Jeux 'Blockade'"
-    ],
     "nom": "Snake",
-    "description": "Le serpent doit manger le plus de fruit possible qui apparaît dans le jeu sans devoir passer par-dessus lui",
-    "histoire": "Il à été développé et édité par Germin Industrie en 1976.Le jeu a connue son pique en 1998 quand Nokia à émerger Snake dans leur nouveau téléphone.",
+    "description": "Dans Snake, le joueur contrôle un serpent qui se déplace à l'écran. Le but est de faire grandir le serpent en le faisant manger des points tout en évitant de heurter les murs ou le corps du serpent. Plus le serpent grandit, plus le jeu devient difficile car le joueur doit trouver un moyen de manœuvrer le serpent dans des espaces de plus en plus étroits. Si le serpent touche un mur ou son propre corps, la partie est terminée.",
+    "auteur": "Llama the best",
+    "approuver": true,
+    "unity": "https://i.simmer.io/@llama/snake",
     "__collections__": {}
   },
   {
-    "description": "Le but est de protéger notre planète des extraterrest. Le joueur peut seulement se déplacer horizontalement et pourra se défendre avec \"Espace\" pour éliminer les extraterrest qui s'en vient vers la terre.\n\nIl faudra faire attention un UFO apparait de temps de temps selon le nombre de tire que tu as fait il donnera entre 50, 100, 150, 200 ou 300 points.",
+    "approuver": true,
+    "date": {
+      "__datatype__": "timestamp",
+      "value": {
+        "_seconds": 1678435229,
+        "_nanoseconds": 0
+      }
+    },
+    "categories": [
+      "Plateformeur",
+      "Aventure"
+    ],
+    "url": "",
+    "unity": "",
+    "histoire": "Le jeu Metroid a été développé par Nintendo R&D1 et dirigé par Yoshio Sakamoto en 1986. Il a été conçu pour la console Nintendo Entertainment System (NES) et a été l'un des premiers jeux à intégrer des éléments de jeu de rôle dans un jeu d'action-aventure. Le personnage principal, Samus Aran, est devenu l'un des personnages les plus emblématiques de Nintendo grâce à ce jeu. Le gameplay permettait aux joueurs de choisir leur propre chemin à travers un labyrinthe complexe et dangereux pour atteindre l'objectif final du jeu. Metroid a connu un grand succès commercial et est devenu l'un des jeux les plus appréciés de la NES.",
+    "description": "Metroid est un jeu vidéo d'action-aventure développé par Nintendo en 1986. Dans ce jeu, le joueur contrôle Samus Aran, un chasseur de primes qui doit explorer une planète extraterrestre pour détruire une race d'aliens appelée les Metroids et leur reine. Le joueur doit naviguer dans des labyrinthes souterrains et vaincre des ennemis pour progresser dans le jeu. Metroid a été acclamé pour son gameplay non linéaire et sa finition méticuleuse.",
+    "auteur": "Llama the best",
+    "nom": "Metroid",
+    "__collections__": {}
+  },
+  {
     "categories": [
       "Jeux arcade"
     ],
-    "auteur": "Llama the best",
-    "nom": "Space Invaders",
     "url": "/img/logos/SpaceInvaders.png",
-    "histoire": "Le nom original de Space Invaders était Space Monsters, originalement d'une chanson populaire au Japon. C'est le premier jeu à avoir été appeler comme un 'Blockbuster' et le tout premier à pouvoir sauvegarder le pointage des joueurs.",
-    "approuver": true,
     "date": {
       "__datatype__": "timestamp",
       "value": {
@@ -57,17 +113,20 @@
         "_nanoseconds": 0
       }
     },
+    "nom": "Space Invaders",
+    "auteur": "Llama the best",
+    "histoire": "Au départ, le célèbre jeu vidéo Space Invaders portait le nom de Space Monsters, qui avait été inspiré par une chanson populaire au Japon. Il s'agit du premier jeu vidéo à avoir été qualifié de \"blockbuster\" en raison de sa popularité mondiale instantanée. De plus, il a été le premier jeu à permettre la sauvegarde des scores des joueurs, ce qui a ajouté une dimension compétitive au gameplay simple mais addictif. Aujourd'hui, Space Invaders est considéré comme l'un des jeux vidéo les plus iconiques et a inspiré de nombreux autres jeux depuis sa sortie en 1978.",
+    "description": "Dans ce jeu, l'objectif principal est de défendre la planète contre une invasion extraterrestre. Le joueur ne peut se déplacer que horizontalement et doit utiliser la touche \"Espace\" pour tirer sur les ennemis qui approchent. Il convient également de faire attention à un vaisseau spatial ennemi qui apparaît de temps en temps, lequel offre des points bonus allant de 50 à 300 points en fonction du nombre de tirs que le joueur a effectués.",
+    "approuver": true,
     "unity": "https://i.simmer.io/@llama/space-invaders",
     "__collections__": {}
   },
   {
-    "histoire": "Le nom original du jeu est \"Puck-Man\", mais il a été rebatisé \"Pacman\" suite que les joueurs remplaçait le \"P\" par un \"F\".\n\n\n\n\n\n\n\n\n\n\n\n\n",
     "nom": "Pacman",
-    "url": "/img/Logos/Pacman.png",
-    "approuver": true,
-    "description": "Le but de ce jeu est de ramasser tous les pellets dans le labyrinthe sans se faire attraper par les fantômes. Le pellet plus gros permet de pouvoir manger les fantômes dans un temps limiter",
-    "auteur": "Llama the best",
-    "unity": "https://i.simmer.io/@llama/pacman",
+    "categories": [
+      "Jeux arcade",
+      "Aventure"
+    ],
     "date": {
       "__datatype__": "timestamp",
       "value": {
@@ -75,23 +134,41 @@
         "_nanoseconds": 0
       }
     },
-    "categories": [
-      "Jeux arcade",
-      "Aventure"
-    ],
+    "auteur": "Llama the best",
+    "unity": "https://i.simmer.io/@llama/pacman",
+    "histoire": "Pac-Man est un jeu vidéo créé en 1980 par le développeur japonais Toru Iwatani. Le jeu est rapidement devenu un énorme succès dans le monde entier grâce à son gameplay simple mais addictif et à ses personnages emblématiques. Le joueur doit contrôler un personnage rond jaune appelé Pac-Man et collecter des pellets dans un labyrinthe tout en évitant les fantômes. Si Pac-Man mange un pellet spécial, il peut manger les fantômes pendant une durée limitée. Pac-Man est considéré comme un classique du jeu d'arcade et a influencé de nombreux jeux vidéo depuis sa sortie. Aujourd'hui, Pac-Man reste l'un des jeux les plus célèbres de l'histoire des jeux vidéo et est toujours joué par des millions de personnes dans le monde entier..Le nom original du jeu est \"Puck-Man\", mais il a été rebatisé \"Pacman\" suite que les joueurs remplaçait le \"P\" par un \"F\".",
+    "description": "L'objectif de ce jeu consiste à récupérer tous les pellets disséminés dans le labyrinthe, tout en évitant de se faire attraper par les fantômes. En mangeant le plus gros pellet, le joueur peut éliminer les fantômes pendant une durée limitée.",
+    "url": "/img/Logos/Pacman.png",
+    "approuver": true,
     "__collections__": {}
   },
   {
-    "approuver": true,
-    "unity": "https://i.simmer.io/@llama/pong",
-    "auteur": "llama",
-    "histoire": "Le développeur original de pong est Allan Alcorn chez Atari en 1972. Originalement Pong à été réfléchis lors d'un exercise d'entrainement pour les employés. Lorsque Allan Alcorn a fini de produire Pong, le fondateur d'Atari a fait des ajustement et a installer la toute première machine d'arcade dans un bar local. Par son succès, le fondateur décide d'en produire plus à leur nom plutôt que vendre la license à d'autre compagnie",
-    "nom": "Pong",
+    "histoire": "Le jeu Galaga a été développé par la société japonaise Namco en 1981, qui est également à l'origine de nombreux autres jeux vidéo populaires. Galaga a été conçu comme une suite de Galaxian et est devenu rapidement l'un des jeux d'arcade les plus populaires de tous les temps, avec plus de 20 millions de machines vendues dans le monde entier. Namco a depuis fusionné avec Bandai pour former Bandai Namco Entertainment, qui continue à produire des jeux vidéo à succès aujourd'hui.",
+    "nom": "Galaga",
+    "url": "",
+    "unity": "",
     "categories": [
-      "Jeux sport",
-      "Jeux arcade"
+      "Stratégie"
     ],
+    "date": {
+      "__datatype__": "timestamp",
+      "value": {
+        "_seconds": 1678432233,
+        "_nanoseconds": 0
+      }
+    },
+    "approuver": true,
+    "auteur": "Llama the best",
+    "description": "Galaga est un jeu vidéo de tir à la troisième personne développé par Namco en 1981. Dans ce jeu, le joueur contrôle un vaisseau spatial et doit détruire des vagues d'aliens ennemis qui descendent vers lui tout en évitant leurs tirs. Le jeu comprend des power-ups qui augmentent la puissance de feu du vaisseau et permettent de capturer des ennemis pour obtenir des points supplémentaires. Galaga est considéré comme un classique du jeu d'arcade et a été porté sur de nombreuses plates-formes.",
+    "__collections__": {}
+  },
+  {
     "url": "/img/Logos/Pong.png",
+    "histoire": "Pong a été développé en 1972 par Allan Alcorn, un concepteur chez Atari. À l'origine, le jeu a été créé comme un exercice d'entraînement pour les employés de la société. Une fois qu'Alcorn a terminé le développement de Pong, le fondateur d'Atari a apporté quelques ajustements et installé la première machine d'arcade dans un bar local. Le jeu a connu un grand succès, ce qui a conduit Atari à produire davantage de machines sous leur propre nom plutôt que de vendre des licences à d'autres entreprises.",
+    "unity": "https://i.simmer.io/@llama/pong",
+    "description": "Pong est un jeu vidéo classique dans lequel deux joueurs contrôlent des raquettes sur un écran et s'affrontent pour marquer des points. Le jeu se joue sur un terrain de ping-pong virtuel et le but est d'empêcher la balle de passer derrière sa propre raquette tout en la renvoyant vers l'adversaire. Le joueur qui marque le plus de points à la fin du match gagne. Le gameplay est simple mais addictif, et Pong est considéré comme l'un des premiers jeux vidéo à succès de l'histoire, qui a influencé de nombreux jeux depuis sa sortie en 1972.",
+    "auteur": "llama",
+    "approuver": true,
     "date": {
       "__datatype__": "timestamp",
       "value": {
@@ -99,6 +176,93 @@
         "_nanoseconds": 0
       }
     },
-    "description": "Se jeu est le tout premier jeu vidéo sur une machine d'arcade. C'est une simulation de tennis de table en deux dimension. le but est que le premier joueur aye atteint 10 points gagne la partie. Les joueurs peuvent gagner des points lorsque son adversaire manque la balle. ",
+    "nom": "Pong",
+    "categories": [
+      "Jeux sport",
+      "Jeux arcade"
+    ],
+    "__collections__": {}
+  },
+  {
+    "approuver": true,
+    "nom": "Mega Man",
+    "histoire": "Mega Man, également connu sous le nom de Rockman au Japon, a été développé et édité par Capcom en 1987. Le jeu a été créé par Akira Kitamura et est devenu rapidement l'un des jeux les plus populaires de la NES. Le personnage principal, Mega Man, est un robot qui doit affronter huit boss pour récupérer leurs armes spéciales et vaincre le méchant Dr Wily. Le jeu a été acclamé pour sa musique, son gameplay et sa difficulté élevée, et a donné lieu à de nombreuses suites et spin-offs.",
+    "unity": "",
+    "categories": [
+      "Plateformeur",
+      "Aventure"
+    ],
+    "auteur": "Llama the best",
+    "url": "",
+    "description": "Mega Man, connu au Japon sous le nom de Rockman, a été développé et édité par Capcom pour la console NES en 1987. Le jeu est centré autour de Mega Man, un robot créé par le Dr. Light pour protéger le monde de la menace du Dr. Wily et de ses robots maléfiques. Le gameplay de Mega Man consiste en des niveaux de plateforme, où le joueur doit éviter les pièges et les ennemis tout en combattant des boss robotiques à la fin de chaque niveau. Les joueurs peuvent acquérir les armes des boss vaincus, qui peuvent être utilisées pour vaincre les ennemis plus tard dans le jeu. Le concept de Mega Man a été largement influencé par les émissions de super-héros japonaises, ce qui explique l'apparence colorée et stylisée du jeu.",
+    "date": {
+      "__datatype__": "timestamp",
+      "value": {
+        "_seconds": 1678435470,
+        "_nanoseconds": 0
+      }
+    },
+    "__collections__": {}
+  },
+  {
+    "nom": "The Legend of Zelda",
+    "approuver": true,
+    "histoire": "The Legend of Zelda est un jeu vidéo d'action-aventure développé et édité par Nintendo en 1986. Le jeu a été créé par le célèbre designer de jeux vidéo Shigeru Miyamoto, connu pour avoir créé d'autres franchises à succès de Nintendo telles que Super Mario Bros. et Donkey Kong. The Legend of Zelda a été un grand succès dès sa sortie et a lancé une franchise qui continue de prospérer aujourd'hui. Le jeu a été salué pour son gameplay innovant, sa grande carte du monde ouverte et sa musique emblématique. Le joueur incarne Link, un jeune héros chargé de sauver la princesse Zelda et le royaume d'Hyrule de l'antagoniste Ganon. Le jeu a été adapté sur plusieurs consoles et a connu de nombreuses suites, préquelles et spin-offs.",
+    "url": "",
+    "auteur": "Llama the best",
+    "description": "The Legend of Zelda est un jeu vidéo d'action-aventure développé par Nintendo en 1986. Dans ce jeu, le joueur contrôle Link, un jeune héros, qui doit sauver la princesse Zelda et récupérer les huit fragments de la Triforce pour vaincre le méchant Ganon. Le joueur doit explorer un monde ouvert rempli de donjons et de puzzles à résoudre. Le jeu est devenu célèbre pour sa musique mémorable et son gameplay innovant, qui a établi les bases du genre d'action-aventure.",
+    "categories": [
+      "Stratégie",
+      "Aventure"
+    ],
+    "date": {
+      "__datatype__": "timestamp",
+      "value": {
+        "_seconds": 1678435135,
+        "_nanoseconds": 0
+      }
+    },
+    "unity": "",
+    "__collections__": {}
+  },
+  {
+    "nom": "Final Fantasy",
+    "url": "",
+    "date": {
+      "__datatype__": "timestamp",
+      "value": {
+        "_seconds": 1678435358,
+        "_nanoseconds": 0
+      }
+    },
+    "unity": "",
+    "categories": [
+      "Aventure"
+    ],
+    "auteur": "Llama the best",
+    "approuver": true,
+    "histoire": "Final Fantasy a été développé par Hironobu Sakaguchi pour la société Square. Le jeu a été créé en réponse aux difficultés financières que la société rencontrait à l'époque. Sakaguchi a choisi de créer un jeu de rôle qui serait inspiré des jeux de rôle de table populaires à l'époque. Le jeu a été un succès commercial et a lancé une série de jeux qui dure encore aujourd'hui.",
+    "description": "Final Fantasy est un jeu de rôle développé par Hironobu Sakaguchi et son équipe chez Square. Sorti en 1987 pour la console NES, il a été conçu pour être le dernier jeu de Square, qui était au bord de la faillite à l'époque. Cependant, le jeu a rencontré un succès inattendu, ce qui a sauvé la société de la fermeture. Le gameplay de Final Fantasy est centré autour d'une équipe de quatre personnages, qui doivent combattre des ennemis et résoudre des énigmes pour avancer dans l'histoire. Les joueurs peuvent personnaliser leurs personnages avec des armes, des armures et des sorts, et doivent gérer leurs ressources avec soin pour survivre aux combats difficiles.",
+    "__collections__": {}
+  },
+  {
+    "date": {
+      "__datatype__": "timestamp",
+      "value": {
+        "_seconds": 1678434989,
+        "_nanoseconds": 0
+      }
+    },
+    "url": "",
+    "nom": "Street Fighter II",
+    "unity": "",
+    "categories": [
+      "Stratégie",
+      "Jeux arcade"
+    ],
+    "auteur": "Llama the best",
+    "approuver": true,
+    "histoire": "Street Fighter II a été développé et édité par Capcom en 1991. Le jeu a été créé par le concepteur de jeux vidéo japonais Akira Nishitani et le graphiste Akira Yasuda, également connu sous le nom d'\"Akiman\". La première version du jeu a été publiée pour les salles d'arcade et le succès a été immédiat. Le jeu a ensuite été adapté pour diverses plates-formes de jeu, y compris la Super Nintendo Entertainment System et la Sega Genesis. Street Fighter II est devenu un jeu vidéo emblématique de la culture populaire et a inspiré de nombreuses suites et adaptations.",
+    "description": "Street Fighter II est un jeu de combat développé par Capcom en 1991. Dans ce jeu, le joueur choisit l'un des huit personnages disponibles et affronte d'autres personnages dans des combats à un contre un. Chaque personnage a un ensemble de mouvements et de techniques de combat uniques. Le jeu est devenu populaire dans les salles d'arcade et a été porté sur de nombreuses consoles de jeux vidéo. Street Fighter II a été l'un des premiers jeux de combat à succès et a lancé une franchise de jeux de combat à succès.",
     "__collections__": {}
   }]

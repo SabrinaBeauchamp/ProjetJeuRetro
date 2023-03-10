@@ -5,7 +5,7 @@ import { profileContext, ProfileProvider } from '../Context/Profile';
 import { collection, onSnapshot, where, query, getDocs } from 'firebase/firestore';
 import { db } from '../Config/firebase';
 
-import { Head , MenuPrincipal} from "../Data/Data";
+import { Head , MenuPrincipal} from "../Data/Pages";
 
 import "./Layout.scss";
 

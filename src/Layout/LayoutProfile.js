@@ -1,6 +1,6 @@
 import { Outlet } from "react-router-dom";
 import { ProfileProvider } from "../Context/Profile";
-import {Connection, Head, MenuPrincipal, LayoutNormal} from "../Data/Data";
+import {Connection, Head, MenuPrincipal, LayoutNormal} from "../Data/Pages";
 
 const LayoutProfile = () => {
 

@@ -1,7 +1,7 @@
 import { useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { profileContext } from "../../Context/Profile";
-import { Input } from "../../Data/Data";
+import { Input } from "../../Data/Pages";
 
 import './ProfileDetail.scss';
 

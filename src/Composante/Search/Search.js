@@ -26,7 +26,7 @@ const Search = ({ indexName, seaching, IsSearching}) => {
                 <Link to = {`/jeux/${hit.nom}`}>
                         <article className="boxJeu" >
                             <div className="img">
-                                <img src={hit.url != null ? hit.url : "/img/Logos/logo.png"} alt="jeu" />
+                                <img src={hit.url != '' ? hit.url : "/img/Logos/logo.png"} alt="jeu" />
                             </div>
                             <div className="nom">
                                 <h4>{hit.nom}</h4>

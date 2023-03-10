@@ -16,10 +16,6 @@ export const categorie = [
         selected: false,
     },
     {
-        nom: "MOBA",
-        selected: false,
-    },
-    {
         nom:"Horreur",
         selected: false,
     },
@@ -37,10 +33,6 @@ export const categorie = [
     },
     {
         nom:"Stratégie",
-        selected: false,
-    },
-    {
-        nom: "Jeux 'Blockade'",
         selected: false,
     },
     {
@@ -101,20 +93,20 @@ export const completerIncsription = [
 export const options = [
     {
         nom:"aime",
-        url:"/img/imgs/posseder.png",
-        titre:"J'aime",
+        titre:"je possède",
+        url:"/img/biblio.png",
         selected: false,
     },
     {
         nom:"maybe",
-        url:"/img/imgs/like.png",
-        titre:"Peut-être",
+        titre:"j'aime",
+        url:"/img/like.png",
         selected: false,
     },
     {
         nom:"nope",
+        titre:"je ne suis pas intéresser",
         url:"/img/imgs/nope.png",
-        titre:"Pas intéresser",
         selected: false,
     },
 ]

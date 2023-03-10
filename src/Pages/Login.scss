@@ -41,20 +41,21 @@
             height: 50vh;
             display: flex;
             align-items: flex-end;
+            position: relative;
             .btnGoogle {
                 width: 100%;
-                position: relative;
             }
             .mascotte {
                 position: absolute;
                 width: 50%;
-                height: 80%;
-                top: -140%;
+                height: 90%;
+                bottom: 200%;
                 left: 25%;
                 right: 25%;
                 padding: 0;
+                z-index: -1;
                 .pop-up {
-                    top: -300%;
+                    bottom: 70%;
                 }
                 .img {
                     width: 50%;

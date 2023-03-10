@@ -1,5 +1,5 @@
 import { useState, useEffect, useContext } from "react";
-import {Fiches, Recent, Search} from "../../Data/Data";
+import {Fiches, Recent, Search} from "../../Data/Pages";
 import moment from 'moment';
 import { profileContext } from '../../Context/Profile';
 import { Link, useNavigate } from "react-router-dom";

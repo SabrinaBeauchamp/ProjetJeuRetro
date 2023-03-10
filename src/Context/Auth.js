@@ -47,7 +47,6 @@ const AuthProvider = ({children}) => {
             const docRef = doc(db, 'Users', user.uid);
             await setDoc(docRef, {
                 nom: user.displayName,
-                liste:"",
             },{merge: true})
         }
         catch(error){

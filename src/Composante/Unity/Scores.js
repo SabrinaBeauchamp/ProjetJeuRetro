@@ -4,6 +4,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { db } from '../../Config/firebase'
 import { profileContext } from'../../Context/Profile';
 import { jeux } from '../../Data/Array';
+import PopUp from '../PopUp/PopUp';
 
 import './Scores.scss';
 
@@ -37,8 +38,8 @@ const Scores = () => {
     } 
 
     return(
-        <>
-            <h2 className='page-score'>Scores</h2>
+        <div className='array_score'>
+            <h2 className='page-score'>Tableau de Pointages</h2>
             <section className='tableau'>
                 <section className='jeux'>
                 {ArrayGame}
@@ -68,8 +69,10 @@ const Scores = () => {
                  </section>
 
             </section>
+            <PopUp nomliste={''} slogan="Penses-tu être l'un des meilleurs ? Cet endroit te permettra de consulter ton score ainsi que celui des autres joueurs." />
         
-        </>
+        
+        </div>
     )
 }
 export default (Scores)

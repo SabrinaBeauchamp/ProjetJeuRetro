@@ -16,7 +16,7 @@ const Listes = () => {
                if ( profile?.categories[Object?.keys(profile?.categories)[index]] ===  option && option != null) 
                 setListe(currentItem => [{nom: profile?.liste[Object?.keys(profile?.categories)[index]]}, ...currentItem])
         }
-        if (option != '')
+        if (profile?.categories != null)
             GenererListe();
         
     },[option])
@@ -33,7 +33,7 @@ const Listes = () => {
                             </Link>
                         </p>
                     ))
-                : <button className="go-bible"><Link  to="/jeux">Aller voir la bible</Link></button>
+                : <button className="go-bible"><Link  to="/jeux/all">Aller voir la bible</Link></button>
 
             }
         </section>
@@ -47,7 +47,7 @@ const Listes = () => {
                     ShowListe
                     :null
                 }
-                <span onClick={() => ListeHandeler('aime')} className="dropdown">.</span>
+                <span onClick={() => ListeHandeler('aime')} className="dropdown"><img src="/img/arrow_down.png"/></span>
             </div>
             <div className="aime box">
                 <p>J'aime</p>
@@ -56,7 +56,7 @@ const Listes = () => {
                     ShowListe
                     :null
                 }
-                <span onClick={() => ListeHandeler('maybe')} className="dropdown">.</span>
+                <span onClick={() => ListeHandeler('maybe')} className="dropdown"><img src="/img/arrow_down.png"/></span>
             </div>
             <div className="nope box">
                 <p>Pas intéresser</p>
@@ -65,7 +65,7 @@ const Listes = () => {
                     ShowListe
                     :null
                 }
-                <span onClick={() => ListeHandeler("nope")} className="dropdown">.</span>
+                <span onClick={() => ListeHandeler("nope")} className="dropdown"><img src="/img/arrow_down.png"/></span>
             </div>
         </>
     )
