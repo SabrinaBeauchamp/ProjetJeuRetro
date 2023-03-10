@@ -111,4 +111,4 @@ export const options = [
     },
 ]
 
-export const jeux = ["Pong", "Pacman", "Space Invaders", 'Démineur', 'Snake']
+export const jeux = ["Pong", "Pacman", "SpaceInvaders", 'Demineur', 'Snake']

@@ -6,7 +6,7 @@ const Input = ({label, type, text, ChangeFn, choix, nameFn, value}) => {
                 type !== "text" ?
                     choix?.map(({nom, selected}, i) => ( 
                         <div key={nom+i}>
-                            <label htmlFor={nom}>{nom}</label>
+                            <label htmlFor={nom+ text}>{nom}</label>
                             <input type={type} id={nom} name={nom} onChange={(e) =>ChangeFn(nom, label)} checked={selected}/>
                         </div>
                     ))

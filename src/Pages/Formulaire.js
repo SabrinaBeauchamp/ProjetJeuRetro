@@ -11,11 +11,10 @@ import Checkbox from "../Composante/Input/CheckBox";
 import "./Formulaire.scss";
 
 const Formulaire = () => {
-    const { user, isLoading } = useContext(authContext)
+    const { user,  } = useContext(authContext)
     const [choixReponse, setChoix] = useState(choix);
     const [choixReponse2, setChoix2] = useState(choix);
-    const {profile, AddFormulaire} = useContext(profileContext)
-    const navigate = useNavigate();
+    const {isLoading, AddFormulaire} = useContext(profileContext)
     const [isValid, setIsValid] = useState(false);
     const [categories, setCategories] = useState(categorie);
     const [nom, setNom] = useState('');
@@ -83,7 +82,7 @@ const Formulaire = () => {
     return(
         <>
         {
-            !isDone ?
+            
             <section className="formAdd">
                 <h2>Formulaire</h2>
                 <form onSubmit={ClickHandeler} className="formulaireInit">
@@ -107,12 +106,6 @@ const Formulaire = () => {
                     </section>
                     <button onClick={ClickHandeler} disabled={!isValid}>Rentrer dans l'asile</button>
                 </form>
-            </section>
-            :
-            <section className="submission">
-                <h2>Merci d'avoir investi dans l'asile de l'arcade</h2>
-                <p>Votre jeu sera bientôt prêt</p>
-                <button onClick={()=>navigate("/")}>Retourner dans l'asile</button>
             </section>
 
     

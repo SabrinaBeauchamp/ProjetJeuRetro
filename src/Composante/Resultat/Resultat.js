@@ -61,7 +61,7 @@ const Resultat = ({isAccueil}) => {
                     <nav className="navBible">
                         <ul>
                             <div>
-                                <li onClick={() => ClickMenu('new')} className={isClick === 'new'? `actif`: ""} >Les nouveautées</li>
+                                <li onClick={() => ClickMenu('new')} className={isClick === 'new'? `actif`: ""} >Les nouveautés</li>
                                 <li onClick={() => ClickMenu('bible')} className={isClick === 'bible' ? `actif`: ""} >La bible</li>
                             </div>
                             <div>

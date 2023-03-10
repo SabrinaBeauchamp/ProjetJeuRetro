@@ -25,7 +25,7 @@ const Membre = ({membre, removeFn}) => {
     
     return(
         <section className="show-membre">
-            <button onClick={() => removeFn()} className="back">retourner</button>
+            <button onClick={() => removeFn()} className="back">retour</button>
         <h2>{membre?.formulaire[0].reponse === 'oui'? membre?.pseudonyme + ' ('+ membre?.nom+') ': membre?.pseudonyme}</h2>
         <div className="categories-membre">
             <h3>Categories</h3>

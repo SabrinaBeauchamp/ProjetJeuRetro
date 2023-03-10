@@ -21,6 +21,7 @@ const ProfileProvider = ({children}) => {
     const [profile,setProfile] = useState({});
     
     
+    
     // Récupérer LE profil de l'utilisateur connecté à partir du user.uid
     useEffect(() => {
         const unsub = onSnapshot(doc(db, 'Users', user.uid), (doc) => setProfile({

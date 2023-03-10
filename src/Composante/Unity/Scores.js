@@ -26,16 +26,19 @@ const Scores = () => {
         if (profile.id)
         getDocument() 
     },[profile?.id])
+    console.log(scores);
     
     const ArrayGame = jeux.map((i,jeu)=>{
         return <p onClick={()=>ChangeArray(i)} key={jeu+i}>{i}</p>
     })
 
-    const ChangeArray = (nom) => {
-        setNom( nom === "Démineur" ? "Demineur" :nom);
-        setScoresJeu();
-        setScoresJeu(scores?.filter(s => s.jeu === nom).map(s =>s))
+    const ChangeArray = (n) => {
+        console.log(n);
+        setNom( n);
+        setScoresJeu(currentState => scores?.filter(s => s.jeu === n).map(s =>s))
     } 
+    console.log(scoresJeu);
+
 
     return(
         <div className='array_score'>
