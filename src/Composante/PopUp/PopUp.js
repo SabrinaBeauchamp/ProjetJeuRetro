@@ -20,7 +20,7 @@ const PopUp = ({nomJeu, nomliste, slogan}) => {
                 
             }
             <div className="img">
-                <img src="/img/compte/moumou_site.png" alt="moumou"/>
+                <img src="/img/Compte/moumouS.png" alt="moumou"/>
             </div>
         </section>
     )

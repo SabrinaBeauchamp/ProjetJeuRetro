@@ -18,7 +18,7 @@ const Head = () => {
             <nav>
                 <ul>
                     <li><Link to="/profile">
-                        <img src="/img/moumou_logoCompte.png" alt="compte" />
+                        <img src="/img/Compte/moumouC.png" alt="compte" />
                         </Link></li>
                     <li><Link to='/jeux/all'>
                             <img src="/img/bible.png" alt="La bible"/>
