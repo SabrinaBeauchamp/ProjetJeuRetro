@@ -90,6 +90,7 @@ const AddBible = () => {
                     <TextArea label="securiter" text="L'histoire de sa création" ChangeFn={(e) => updateBible(e.target.value, "histoire")}/>
                     <button onClick={ClickHandeler} disabled={!isValid}>Rentrer votre pièce</button>
                 </form>
+                <PopUp slogan={"Oooh un nouveau jeu! J'espère ne pas subir le même sort dans ce nouveau jeu que dans Snake où je finissais toujours par me faire manger."} nomliste='' />
             </section>
             :
             <section className="submission">
