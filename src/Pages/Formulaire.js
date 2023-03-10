@@ -83,7 +83,6 @@ const Formulaire = () => {
     return(
         <>
         {
-            profile?.formulaire?.length > 0 ?
             !isDone ?
             <section className="formAdd">
                 <h2>Formulaire</h2>
@@ -116,7 +115,7 @@ const Formulaire = () => {
                 <button onClick={()=>navigate("/")}>Retourner dans l'asile</button>
             </section>
 
-    : <Load/>
+    
         }
         
         </>
