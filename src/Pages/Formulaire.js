@@ -88,7 +88,7 @@ const Formulaire = () => {
                 <form onSubmit={ClickHandeler} className="formulaireInit">
                     <div className="presentation">
                         <div className="ficheAdds">
-                            <div className="img"><img src="/img/Compte/moumou_site.png"/></div>
+                            <div className="img"><img src="/img/Compte/moumouS.png"/></div>
                             <div className="input">
                                 <Input label="pseudonyme" type="text" text="Votre Pseudonyme" nameFn={updateNom}/>
                             </div>
